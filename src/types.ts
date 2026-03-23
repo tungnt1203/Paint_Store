@@ -11,6 +11,11 @@ export interface Product {
     [key: string]: string;
   };
   features: string[];
+  durability?: string;
+  waterproof?: string;
+  cleaning?: string;
+  capacities?: string[];
+  colors?: { name: string; hex: string }[];
 }
 
 export interface Category {

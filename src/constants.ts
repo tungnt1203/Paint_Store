@@ -21,6 +21,16 @@ export const PRODUCTS: Product[] = [
       'Kháng khuẩn hiệu quả',
       'Chùi rửa tối ưu',
       'Mặt sơn nhẵn mịn'
+    ],
+    durability: 'Bảo vệ màng sơn bền bỉ lên đến 10 năm, chống bong tróc.',
+    waterproof: 'Khả năng kháng nước bề mặt, ngăn chặn ẩm mốc xâm nhập.',
+    cleaning: 'Công nghệ Diamond Glow giúp lau chùi vết bẩn cứng đầu dễ dàng.',
+    capacities: ['1L', '5L', '15L'],
+    colors: [
+      { name: 'Trắng', hex: '#FFFFFF' },
+      { name: 'Kem', hex: '#F5F5DC' },
+      { name: 'Xám', hex: '#808080' },
+      { name: 'Xanh', hex: '#1E3A8A' }
     ]
   },
   {
@@ -42,6 +52,15 @@ export const PRODUCTS: Product[] = [
       'Bề mặt bóng mịn',
       'Dễ lau chùi',
       'Kháng khuẩn & Chống nấm mốc'
+    ],
+    durability: 'Màng sơn dẻo dai, giữ màu sắc tươi mới theo thời gian.',
+    waterproof: 'Chống thấm ngược và ngăn ngừa nấm mốc phát triển.',
+    cleaning: 'Bề mặt bóng giúp việc lau chùi trở nên nhẹ nhàng hơn bao giờ hết.',
+    capacities: ['1L', '5L', '17L'],
+    colors: [
+      { name: 'Trắng', hex: '#FFFFFF' },
+      { name: 'Vàng', hex: '#FFD700' },
+      { name: 'Hồng', hex: '#FFD1DC' }
     ]
   },
   {
@@ -63,6 +82,15 @@ export const PRODUCTS: Product[] = [
       'Chống thấm vượt trội',
       'Chống rêu mốc gấp 2 lần',
       'Làm mát nhà tới 5 độ C'
+    ],
+    durability: 'Bảo vệ tối ưu lên đến 12 năm trước thời tiết khắc nghiệt.',
+    waterproof: 'Công nghệ Powerflexx chống thấm tuyệt đối, ngăn nước mưa thấm qua khe nứt.',
+    cleaning: 'Khả năng tự làm sạch bề mặt khi trời mưa.',
+    capacities: ['1L', '5L', '18L'],
+    colors: [
+      { name: 'Trắng', hex: '#FFFFFF' },
+      { name: 'Xám Nhạt', hex: '#D3D3D3' },
+      { name: 'Xanh Dương', hex: '#1E3A8A' }
     ]
   },
   {
@@ -127,6 +155,137 @@ export const PRODUCTS: Product[] = [
       'Kháng khuẩn',
       'Màu sắc bền đẹp'
     ]
+  }
+];
+
+export const COLOR_PALETTE = [
+  {
+    id: 'white',
+    name: 'Trắng tinh khôi',
+    hex: '#FFFFFF',
+    code: 'OW 101',
+    description: 'Mang lại cảm giác rộng rãi, sạch sẽ và hiện đại cho không gian.',
+    preview: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800',
+    relatedProducts: ['1', '4']
+  },
+  {
+    id: 'cream',
+    name: 'Kem ấm áp',
+    hex: '#F5F5DC',
+    code: 'OW 108',
+    description: 'Tạo không gian gần gũi, ấm cúng và sang trọng cổ điển.',
+    preview: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800',
+    relatedProducts: ['2', '6']
+  },
+  {
+    id: 'gray',
+    name: 'Xám hiện đại',
+    hex: '#808080',
+    code: 'GR 205',
+    description: 'Sự lựa chọn hoàn hảo cho phong cách tối giản và tinh tế.',
+    preview: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800',
+    relatedProducts: ['1', '5']
+  },
+  {
+    id: 'blue',
+    name: 'Xanh bình yên',
+    hex: '#1E3A8A',
+    code: 'BL 302',
+    description: 'Gợi nhớ về bầu trời và đại dương, mang lại sự thư thái.',
+    preview: 'https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&q=80&w=800',
+    relatedProducts: ['3', '5']
+  },
+  {
+    id: 'yellow',
+    name: 'Vàng năng lượng',
+    hex: '#FFD700',
+    code: 'YL 401',
+    description: 'Kích thích sự sáng tạo và mang lại niềm vui cho căn phòng.',
+    preview: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=800',
+    relatedProducts: ['2', '4']
+  },
+  {
+    id: 'pastel',
+    name: 'Hồng Pastel',
+    hex: '#FFD1DC',
+    code: 'PS 505',
+    description: 'Nhẹ nhàng, lãng mạn và cực kỳ phù hợp cho phòng ngủ.',
+    preview: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800',
+    relatedProducts: ['4', '6']
+  }
+];
+
+export const PROJECTS = [
+  {
+    id: '1',
+    title: 'Biệt thự Vinhomes Grand Park',
+    type: 'Nhà phố',
+    before: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=800',
+    after: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
+    description: 'Sử dụng sơn Dulux Weathershield bảo vệ ngoại thất bền bỉ.'
+  },
+  {
+    id: '2',
+    title: 'Căn hộ Penthouse District 1',
+    type: 'Căn hộ',
+    before: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=800',
+    after: 'https://images.unsplash.com/photo-1600607687960-4a2283a71056?auto=format&fit=crop&q=80&w=800',
+    description: 'Phối màu Jotun Majestic mang lại vẻ đẹp sang trọng.'
+  },
+  {
+    id: '3',
+    title: 'Chuỗi Cafe The Coffee House',
+    type: 'Công trình thương mại',
+    before: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800',
+    after: 'https://images.unsplash.com/photo-1559925393-8be0ec41b5ec?auto=format&fit=crop&q=80&w=800',
+    description: 'Sơn Nippon Odour-less đảm bảo không mùi, an toàn cho khách hàng.'
+  }
+];
+
+export const BLOG_POSTS = [
+  {
+    id: '1',
+    title: 'Sơn nhà màu gì đẹp 2026? Xu hướng màu sắc kiến trúc mới nhất',
+    excerpt: 'Khám phá những gam màu sẽ lên ngôi trong năm 2026, từ tông đất ấm áp đến xanh mint thanh khiết.',
+    image: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=800',
+    date: '20/03/2026'
+  },
+  {
+    id: '2',
+    title: 'Top 5 màu sơn phòng ngủ giúp bạn ngủ ngon và sâu hơn',
+    excerpt: 'Màu sắc ảnh hưởng trực tiếp đến tâm trạng. Hãy chọn đúng màu để có giấc ngủ trọn vẹn.',
+    image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800',
+    date: '15/03/2026'
+  },
+  {
+    id: '3',
+    title: 'Bí quyết chọn sơn ngoại thất chống thấm tuyệt đối cho mùa mưa',
+    excerpt: 'Hướng dẫn chi tiết cách chọn và thi công sơn chống thấm để bảo vệ ngôi nhà của bạn.',
+    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800',
+    date: '10/03/2026'
+  }
+];
+
+export const SERVICES = [
+  {
+    title: 'Tư vấn màu miễn phí',
+    description: 'Chuyên gia phối màu giúp bạn chọn gam màu hoàn hảo.',
+    icon: 'Palette'
+  },
+  {
+    title: 'Giao hàng tận nơi',
+    description: 'Giao hàng nhanh chóng trong ngày tại TP.HCM.',
+    icon: 'Truck'
+  },
+  {
+    title: 'Cam kết chính hãng',
+    description: 'Hoàn tiền 200% nếu phát hiện hàng giả, hàng nhái.',
+    icon: 'ShieldCheck'
+  },
+  {
+    title: 'Hỗ trợ thi công',
+    description: 'Kết nối đội ngũ thợ sơn tay nghề cao, uy tín.',
+    icon: 'Wrench'
   }
 ];
 
