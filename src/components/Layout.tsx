@@ -176,7 +176,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-white/10 text-center text-white/40 font-body text-sm">
-        © 2026 Duyên Paint. All rights reserved. Thiết kế bởi AIS.
+        © 2026 Duyên Paint. All rights reserved. Thiết kế bởi tungnt.
       </div>
     </footer>
   );

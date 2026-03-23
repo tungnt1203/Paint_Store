@@ -50,4 +50,4 @@ Dự án đã bao gồm file `vercel.json` để cấu hình **Rewrites**, đả
 Sử dụng `server.ts` làm entry point để phục vụ các file tĩnh và xử lý routing thông qua Express.
 
 ---
-© 2026 Duyên Paint. All rights reserved.
+© 2026 Duyên Paint. All rights reserved. Thiết kế bởi tungnt.
