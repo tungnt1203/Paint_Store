@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const Contact = () => {
@@ -21,7 +21,7 @@ const Contact = () => {
                 <Phone size={24} />
               </div>
               <div>
-                <h4 className="font-headline font-bold text-primary text-lg mb-1">Phone & Zalo</h4>
+                <h4 className="font-headline font-bold text-primary text-lg mb-1">Điện thoại & Zalo</h4>
                 <p className="text-on-surface-variant font-body">090 123 4567 (Ms. Duyên)</p>
                 <p className="text-on-surface-variant font-body">1800-PAINT-01 (Hotline)</p>
               </div>
@@ -51,10 +51,19 @@ const Contact = () => {
           <div className="pt-8 border-t border-outline-variant">
             <h4 className="font-headline font-bold text-primary mb-6">Kết nối với chúng tôi</h4>
             <div className="flex space-x-4">
-              <button className="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <MessageCircle size={20} />
-              </button>
-              {/* Add more social buttons */}
+              <a 
+                href="https://zalo.me/0901234567" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all overflow-hidden p-2"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" 
+                  alt="Zalo" 
+                  className="w-full h-full"
+                  referrerPolicy="no-referrer"
+                />
+              </a>
             </div>
           </div>
         </div>

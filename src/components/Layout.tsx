@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Menu, X, Phone, MessageCircle, ArrowRight, Share2, Award } from 'lucide-react';
+import { Search, Menu, X, Phone, ArrowRight, Share2, Award } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const Navbar = () => {
@@ -149,10 +149,17 @@ export const FloatingActions = () => {
   return (
     <div className="fixed bottom-10 right-10 flex flex-col space-y-4 z-50">
       <a 
-        href="#" 
-        className="w-14 h-14 bg-white/85 backdrop-blur-xl rounded-full flex items-center justify-center industrial-shadow hover:scale-110 transition-transform cursor-pointer border border-white/20 text-primary"
+        href="https://zalo.me/0901234567" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer border border-blue-100"
       >
-        <MessageCircle size={28} />
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" 
+          alt="Zalo" 
+          className="w-10 h-10"
+          referrerPolicy="no-referrer"
+        />
       </a>
       <a 
         href="tel:1800-PAINT-01" 
