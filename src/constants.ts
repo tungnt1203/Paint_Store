@@ -31,6 +31,12 @@ export const PRODUCTS: Product[] = [
       { name: 'Kem', hex: '#F5F5DC' },
       { name: 'Xám', hex: '#808080' },
       { name: 'Xanh', hex: '#1E3A8A' }
+    ],
+    gallery: [
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCEnPccMxG42XfFDh41ICp6sz-ufyewQmcRmh-IjOZvWRDydAnrA99-qxwQwVjutu0VDDLtZkygFltfQ0eTHTnv9s_RlnNRDi1SvRn7RWeU6msLLEWkTxajhHPN0TechSbB147Y4HqbwHtTOYDbcR_jfQ7BcVsQ5YqM81LKQ2ptcRFqS-nSnWHefkBKHDqKJrn2VZtVoarcCcSvgnnfJG7mOIddbOfhK82Db-Jk7qK2MpsSpOVDxF4EkUdjBFuJNZr6OGc_UCI3rS0',
+      'https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800'
     ]
   },
   {
@@ -61,6 +67,12 @@ export const PRODUCTS: Product[] = [
       { name: 'Trắng', hex: '#FFFFFF' },
       { name: 'Vàng', hex: '#FFD700' },
       { name: 'Hồng', hex: '#FFD1DC' }
+    ],
+    gallery: [
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBbx-507v-1SjIDFmB3Rj4V4bTYXGgidEEy14LOM_5eiPf8yHIDfd1OmSIoJkAHa6WQElQlFEVgRofHQCGZd81ktsPAnsrztkZ06jni8NqzlE-XRtkJjg-xHJJl8ai3zRaT8jG0viXOKF2E9UmTbQr_RXgnl0VbfzJ05TxqI3lz-kq7MP8E08XTjmcWOW8tMZgP62cKRYIKzUyAqLyvb-s5SNkUbrh5CmI3-XoRJ0ssl3mPGCaa5eF24r38Emc6CCBaqIdnrxEy0uE',
+      'https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800'
     ]
   },
   {
@@ -91,6 +103,12 @@ export const PRODUCTS: Product[] = [
       { name: 'Trắng', hex: '#FFFFFF' },
       { name: 'Xám Nhạt', hex: '#D3D3D3' },
       { name: 'Xanh Dương', hex: '#1E3A8A' }
+    ],
+    gallery: [
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAbsZmOseFDMbGxU0B_0uKxm9MCRui7mxpd4oatBseCZgdSC3scOyEEGdvjkCrX8f7b86B8OZLklPKXBtuTfrz1TLYHkp3JO32MGjcQmz3yVeTdGUOfEYkowkATfe5pTxPQE0Ztmq-9UDZhB88YrFZoxIpo3xKt9cFkZlj_ZGydRG6LvUetzhnHZGUDlceYPAQL_6nLnTx-FRLQbTYQ79H3Jgg_Wxc6a5vR_YV_yKbU09q8mEKqK65V9OmoDBy0pVwoXOKWf5l6NuM',
+      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=800'
     ]
   },
   {

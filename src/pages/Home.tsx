@@ -109,7 +109,7 @@ const Home = () => {
       </section>
 
       {/* SECTION 2 – Bảng màu sơn */}
-      <section className="py-32 bg-surface px-6 md:px-12">
+      <section id="color-palette" className="py-32 bg-surface px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter mb-4">Khám phá bảng màu</h2>
@@ -299,7 +299,7 @@ const Home = () => {
       </section>
 
       {/* SECTION 6 – Blog SEO */}
-      <section className="bg-surface-container-low py-32 px-6 md:px-12">
+      <section id="blog" className="bg-surface-container-low py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-end mb-16">
             <div>

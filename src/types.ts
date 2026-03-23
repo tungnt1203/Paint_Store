@@ -16,6 +16,7 @@ export interface Product {
   cleaning?: string;
   capacities?: string[];
   colors?: { name: string; hex: string }[];
+  gallery?: string[];
 }
 
 export interface Category {

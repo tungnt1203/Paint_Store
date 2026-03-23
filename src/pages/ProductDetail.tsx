@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ChevronRight, ShieldCheck, CheckCircle2, Info, ArrowLeft, Phone, ShoppingCart, Droplets, Sparkles, Shield, ArrowRightLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { PRODUCTS } from '../constants';
 import { ProductCard } from '../components/Layout';
 
@@ -11,6 +11,7 @@ const ProductDetail = () => {
   const product = PRODUCTS.find(p => p.id === id);
   const [selectedCapacity, setSelectedCapacity] = useState(product?.capacities?.[0] || '');
   const [selectedColor, setSelectedColor] = useState(product?.colors?.[0]?.name || '');
+  const [activeImage, setActiveImage] = useState(product?.image || '');
 
   if (!product) {
     return (
@@ -73,17 +74,37 @@ const ProductDetail = () => {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-6"
           >
-            <div className="bg-white rounded-3xl aspect-square flex items-center justify-center p-12 industrial-shadow border border-outline-variant/10">
-              <img 
-                src={product.image} 
-                alt={product.name} 
-                className="w-full h-full object-contain"
-                referrerPolicy="no-referrer"
-              />
+            <div className="bg-white rounded-3xl aspect-square flex items-center justify-center p-12 industrial-shadow border border-outline-variant/10 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.img 
+                  key={activeImage}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  src={activeImage} 
+                  alt={product.name} 
+                  className="w-full h-full object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </AnimatePresence>
             </div>
             <div className="grid grid-cols-4 gap-4">
-              {[1, 2, 3, 4].map(i => (
-                <div key={i} className="aspect-square bg-white rounded-xl border border-outline-variant/20 cursor-pointer hover:border-primary hover:shadow-md transition-all"></div>
+              {(product.gallery || [product.image]).map((img, i) => (
+                <motion.div 
+                  key={i}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setActiveImage(img)}
+                  className={`aspect-square bg-white rounded-xl border-2 cursor-pointer transition-all overflow-hidden p-2 ${activeImage === img ? 'border-primary shadow-md' : 'border-outline-variant/20 hover:border-primary/50'}`}
+                >
+                  <img 
+                    src={img} 
+                    alt={`${product.name} ${i + 1}`} 
+                    className="w-full h-full object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </motion.div>
               ))}
             </div>
           </motion.div>
