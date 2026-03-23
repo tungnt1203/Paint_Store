@@ -192,11 +192,11 @@ const ProductDetail = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <button className="flex-[2] bg-secondary text-on-secondary font-headline font-black py-5 rounded-2xl hover:bg-secondary-container hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 shadow-xl shadow-secondary/20">
+              <button className="flex-[2] bg-secondary text-on-secondary font-headline font-black py-5 rounded-2xl hover:brightness-110 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 shadow-xl shadow-secondary/20">
                 <ShoppingCart size={24} />
                 MUA NGAY
               </button>
-              <button className="flex-1 bg-primary text-on-primary font-headline font-bold py-5 rounded-2xl hover:bg-primary-container transition-all flex items-center justify-center gap-3">
+              <button className="flex-1 bg-primary text-on-primary font-headline font-bold py-5 rounded-2xl hover:brightness-110 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/20">
                 <Phone size={20} />
                 Tư vấn
               </button>

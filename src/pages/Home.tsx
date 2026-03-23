@@ -66,11 +66,11 @@ const Home = () => {
               Phân phối chính hãng <span className="text-primary font-bold">Dulux, Jotun, Nippon</span>. Mang lại vẻ đẹp hoàn mỹ cho ngôi nhà của bạn.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/catalog" className="bg-primary text-white px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-primary/90 transition-all flex items-center gap-3 shadow-lg shadow-primary/20">
+              <Link to="/catalog" className="bg-primary text-white px-10 py-5 rounded-full font-headline font-bold text-lg hover:brightness-110 hover:scale-[1.02] transition-all flex items-center gap-3 shadow-lg shadow-primary/20">
                 Xem bảng màu
                 <Palette size={20} />
               </Link>
-              <Link to="/catalog" className="bg-secondary text-white px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-secondary/90 transition-all flex items-center gap-3 shadow-lg shadow-secondary/20">
+              <Link to="/catalog" className="bg-secondary text-white px-10 py-5 rounded-full font-headline font-bold text-lg hover:brightness-110 hover:scale-[1.02] transition-all flex items-center gap-3 shadow-lg shadow-secondary/20">
                 Mua ngay
                 <ArrowRight size={20} />
               </Link>

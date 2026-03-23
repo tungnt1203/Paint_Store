@@ -53,7 +53,7 @@ export const Navbar = () => {
           >
             <Search size={22} />
           </button>
-          <Link to="/catalog" className="hidden sm:flex bg-primary text-white px-8 py-3 rounded-full font-headline font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 items-center gap-2">
+          <Link to="/catalog" className="hidden sm:flex bg-primary text-white px-8 py-3 rounded-full font-headline font-bold hover:brightness-110 hover:scale-[1.02] transition-all shadow-lg shadow-primary/20 items-center gap-2">
             Báo giá ngay
           </Link>
           <button 
@@ -265,7 +265,7 @@ export const ProductCard = ({ product }: { product: any, key?: string }) => {
             <Link to={`/product/${product.id}`} className="col-span-1 aspect-square rounded-xl bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
               <Search size={18} />
             </Link>
-            <button className="col-span-4 bg-primary text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-secondary transition-all shadow-lg shadow-primary/10">
+            <button className="col-span-4 bg-primary text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-secondary hover:brightness-110 hover:scale-[1.02] transition-all shadow-lg shadow-primary/10">
               <ShoppingCart size={16} />
               Mua ngay
             </button>
