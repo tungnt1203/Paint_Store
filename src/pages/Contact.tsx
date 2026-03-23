@@ -64,6 +64,19 @@ const Contact = () => {
                   referrerPolicy="no-referrer"
                 />
               </a>
+              <a 
+                href="https://facebook.com/duyenpaint" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all shadow-md overflow-hidden"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" 
+                  alt="Facebook" 
+                  className="w-full h-full"
+                  referrerPolicy="no-referrer"
+                />
+              </a>
             </div>
           </div>
         </div>

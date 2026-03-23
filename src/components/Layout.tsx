@@ -103,7 +103,15 @@ export const Footer = () => {
           <p className="text-on-surface-variant font-body text-sm leading-relaxed">
             Nâng tầm không gian sống với những dòng sơn cao cấp từ các thương hiệu hàng đầu thế giới.
           </p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 items-center">
+            <a href="https://facebook.com/duyenpaint" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all shadow-sm overflow-hidden">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" 
+                alt="Facebook" 
+                className="w-full h-full"
+                referrerPolicy="no-referrer"
+              />
+            </a>
             <Share2 size={20} className="text-primary cursor-pointer hover:text-secondary transition-colors" />
             <Award size={20} className="text-primary cursor-pointer hover:text-secondary transition-colors" />
           </div>
