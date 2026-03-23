@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ChevronRight, ShieldCheck, CheckCircle2, Info, ArrowLeft, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { PRODUCTS } from '../constants';
 import { ProductCard } from '../components/Layout';
 
@@ -21,6 +22,62 @@ const ProductDetail = () => {
 
   return (
     <div className="pt-28 pb-20">
+      <Helmet>
+        <title>{`${product.name} - ${product.brand} | Duyên Paint`}</title>
+        <meta name="description" content={`${product.name} từ ${product.brand}. ${product.description.substring(0, 150)}...`} />
+        <meta property="og:title" content={`${product.name} - ${product.brand} | Duyên Paint`} />
+        <meta property="og:description" content={product.description} />
+        <meta property="og:image" content={product.image} />
+        <link rel="canonical" href={`https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/product/${product.id}`} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": product.name,
+            "image": product.image,
+            "description": product.description,
+            "brand": {
+              "@type": "Brand",
+              "name": product.brand
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": `https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/product/${product.id}`,
+              "priceCurrency": "VND",
+              "price": product.price,
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Trang chủ",
+                "item": "https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Danh mục",
+                "item": "https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/catalog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": product.name,
+                "item": `https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/product/${product.id}`
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* Breadcrumbs */}
         <nav className="flex items-center space-x-2 text-sm font-label text-on-surface-variant mb-12">

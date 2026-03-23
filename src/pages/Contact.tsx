@@ -1,10 +1,16 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
   return (
     <div className="pt-28 pb-20 max-w-7xl mx-auto px-6 md:px-8">
+      <Helmet>
+        <title>Liên Hệ Duyên Paint - Tư Vấn Báo Giá Sơn Dulux & Jotun</title>
+        <meta name="description" content="Liên hệ với Duyên Paint để nhận tư vấn phối màu và báo giá sơn Dulux, Jotun chính hãng. Địa chỉ showroom tại Quận 1, TP. Hồ Chí Minh." />
+        <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/contact" />
+      </Helmet>
       <header className="mb-20">
         <span className="text-secondary font-label font-bold uppercase tracking-widest text-sm block mb-4">Liên hệ với chúng tôi</span>
         <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-primary tracking-tighter">
@@ -59,9 +65,10 @@ const Contact = () => {
               >
                 <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" 
-                  alt="Zalo" 
+                  alt="Liên hệ Duyên Paint qua Zalo" 
                   className="w-full h-full"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </a>
               <a 
@@ -72,9 +79,10 @@ const Contact = () => {
               >
                 <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" 
-                  alt="Facebook" 
+                  alt="Theo dõi Duyên Paint trên Facebook" 
                   className="w-full h-full"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -141,9 +149,10 @@ const Contact = () => {
         </div>
         <img 
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAqQeVjc0ApNrOCx2I6PTV13LeCwix--WAtA-CN6ZI_Jzk2AEpoqnK-FaiXHjgrt21OQxYa7wtUtaQVd53d7OhslwWoL1QzZGLFHF0kxnkkYcIDu1jTb5oPwHN5xgu0CC8S5XcL4wvw_RGLz0yu5GwC43EZrOjIWYzULBB6-By2IVdQXiCFTExYble5WCUJlV-zQKP6gKmq89FgB10nIQenElp4djV9yg_8s0OlSTyU4pcK3LQHmkqBZN14uOoEh2pyjiEUedsCoE" 
-          alt="Map" 
+          alt="Bản đồ vị trí showroom Duyên Paint tại Quận 1, TP.HCM" 
           className="w-full h-full object-cover opacity-50"
           referrerPolicy="no-referrer"
+          loading="lazy"
         />
       </section>
     </div>

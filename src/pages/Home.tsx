@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShieldCheck, CreditCard, Truck } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { PRODUCTS, CATEGORIES } from '../constants';
 import { ProductCard } from '../components/Layout';
 
@@ -10,6 +11,29 @@ const Home = () => {
 
   return (
     <div className="space-y-32 pb-20">
+      <Helmet>
+        <title>Duyên Paint - Đại Lý Sơn Dulux & Jotun Chính Hãng Tại TP.HCM</title>
+        <meta name="description" content="Duyên Paint chuyên cung cấp sơn Dulux, Jotun chính hãng. Giá tốt, giao hàng nhanh, tư vấn phối màu chuyên nghiệp cho mọi công trình kiến trúc." />
+        <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Duyên Paint",
+            "url": "https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/",
+            "logo": "https://picsum.photos/seed/paint/200/200",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "0901234567",
+              "contactType": "customer service"
+            },
+            "sameAs": [
+              "https://facebook.com/duyenpaint",
+              "https://zalo.me/0901234567"
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-primary px-6 md:px-8 pt-20">
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -46,7 +70,7 @@ const Home = () => {
             <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl scale-110 translate-x-12 translate-y-6">
               <img 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG0twnabC6d-xkje5HAnXLyYdf2vyPKOmWX83oc5ooTClhn16rdYnxHq9NLANep5P3-D1jr-juiz7sNrDmlDCr-qyMLNj0dyCeX5174icqVFSzNqifCEJUG9NfEMebx7abmtBlSdgafCIfwsIXRnTLKxmcorBSthtkTLOYAAVG0zS0vKOEOrSzQRDtS_1p-xS0MbVJWx2E8Fm2NOmMxeVGGXrzeLnMVfGbJdqx09lQDBOm14zWeedvoD6b7fjXMp-rEPj1wtwha-Q" 
-                alt="Luxury interior" 
+                alt="Không gian nội thất sang trọng sử dụng sơn cao cấp Duyên Paint" 
                 className="w-full h-[600px] object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -63,7 +87,7 @@ const Home = () => {
               <ShieldCheck size={32} />
             </div>
             <div>
-              <h3 className="font-headline font-extrabold text-primary text-xl">Chính hãng</h3>
+              <h2 className="font-headline font-extrabold text-primary text-xl">Chính hãng</h2>
               <p className="text-on-surface-variant font-body">Đối tác ủy quyền 100% của Dulux & Jotun.</p>
             </div>
           </div>
@@ -72,7 +96,7 @@ const Home = () => {
               <CreditCard size={32} />
             </div>
             <div>
-              <h3 className="font-headline font-extrabold text-primary text-xl">Giá tốt</h3>
+              <h2 className="font-headline font-extrabold text-primary text-xl">Giá tốt</h2>
               <p className="text-on-surface-variant font-body">Giá bán buôn cạnh tranh cho các đại lý.</p>
             </div>
           </div>
@@ -81,7 +105,7 @@ const Home = () => {
               <Truck size={32} />
             </div>
             <div>
-              <h3 className="font-headline font-extrabold text-primary text-xl">Giao nhanh</h3>
+              <h2 className="font-headline font-extrabold text-primary text-xl">Giao nhanh</h2>
               <p className="text-on-surface-variant font-body">Giao hàng trong ngày cho tất cả các dự án trong thành phố.</p>
             </div>
           </div>
@@ -98,9 +122,10 @@ const Home = () => {
           <div className="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-highest min-h-[400px]">
             <img 
               src={CATEGORIES[0].image} 
-              alt="Interior" 
+              alt="Sơn nội thất cao cấp cho không gian nhà ở" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-12">
               <h3 className="text-white text-3xl font-headline font-bold mb-4">Sơn nội thất</h3>
@@ -113,9 +138,10 @@ const Home = () => {
           <div className="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-highest min-h-[400px]">
             <img 
               src={CATEGORIES[1].image} 
-              alt="Exterior" 
+              alt="Sơn ngoại thất bền bỉ bảo vệ công trình" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
               <h3 className="text-white text-2xl font-headline font-bold mb-4">Sơn ngoại thất</h3>
@@ -125,9 +151,10 @@ const Home = () => {
           <div className="md:col-span-12 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[300px]">
             <img 
               src={CATEGORIES[2].image} 
-              alt="Waterproofing" 
+              alt="Giải pháp sơn chống thấm chuyên nghiệp" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent flex flex-col justify-center p-12">
               <h3 className="text-white text-3xl font-headline font-bold mb-4">Sơn chống thấm</h3>

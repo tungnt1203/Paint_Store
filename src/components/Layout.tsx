@@ -48,13 +48,17 @@ export const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className={`p-2 transition-colors ${isScrolled ? 'text-primary hover:text-secondary' : (isHomePage ? 'text-white hover:text-secondary-fixed-dim' : 'text-primary hover:text-secondary')}`}>
+          <button 
+            aria-label="Tìm kiếm sản phẩm"
+            className={`p-2 transition-colors ${isScrolled ? 'text-primary hover:text-secondary' : (isHomePage ? 'text-white hover:text-secondary-fixed-dim' : 'text-primary hover:text-secondary')}`}
+          >
             <Search size={20} />
           </button>
           <button className="hidden sm:block bg-secondary text-on-secondary px-6 py-2 rounded-lg font-headline font-bold scale-95 active:scale-90 transition-transform hover:bg-secondary-container industrial-button">
             Nhận báo giá
           </button>
           <button 
+            aria-label={isMobileMenuOpen ? "Đóng menu" : "Mở menu"}
             className={`md:hidden p-2 transition-colors ${isScrolled ? 'text-primary' : (isHomePage ? 'text-white' : 'text-primary')}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -107,9 +111,10 @@ export const Footer = () => {
             <a href="https://facebook.com/duyenpaint" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all shadow-sm overflow-hidden">
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" 
-                alt="Facebook" 
+                alt="Theo dõi Duyên Paint trên Facebook" 
                 className="w-full h-full"
                 referrerPolicy="no-referrer"
+                loading="lazy"
               />
             </a>
             <Share2 size={20} className="text-primary cursor-pointer hover:text-secondary transition-colors" />
@@ -160,17 +165,20 @@ export const FloatingActions = () => {
         href="https://zalo.me/0901234567" 
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Chat Zalo với chúng tôi"
         className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer border border-blue-100"
       >
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" 
-          alt="Zalo" 
+          alt="Chat Zalo với Duyên Paint" 
           className="w-10 h-10"
           referrerPolicy="no-referrer"
+          loading="lazy"
         />
       </a>
       <a 
         href="tel:1800-PAINT-01" 
+        aria-label="Gọi hotline cho chúng tôi"
         className="w-14 h-14 bg-secondary text-on-secondary rounded-full flex items-center justify-center industrial-shadow hover:scale-110 transition-transform cursor-pointer"
       >
         <Phone size={24} />
@@ -189,9 +197,10 @@ export const ProductCard = ({ product }: { product: any, key?: string }) => {
         <div className="bg-surface-container-highest aspect-[4/5] rounded-xl mb-6 overflow-hidden flex items-center justify-center p-12 transition-transform duration-500 group-hover:scale-[1.02]">
           <img 
             src={product.image} 
-            alt={product.name}
+            alt={`Sơn ${product.brand} ${product.name} chính hãng`}
             className="w-full h-full object-contain mix-blend-multiply"
             referrerPolicy="no-referrer"
+            loading="lazy"
           />
         </div>
       </Link>
