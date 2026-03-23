@@ -15,17 +15,19 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Catalog', path: '/catalog' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Trang chủ', path: '/' },
+    { name: 'Danh mục', path: '/catalog' },
+    { name: 'Giới thiệu', path: '/about' },
+    { name: 'Liên hệ', path: '/contact' },
   ];
+
+  const isHomePage = location.pathname === '/';
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass-nav shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-black text-primary italic font-headline">
-          Master Artisan Paint
+        <Link to="/" className={`text-2xl font-black italic font-headline transition-colors duration-300 ${isScrolled ? 'text-primary' : (isHomePage ? 'text-white' : 'text-primary')}`}>
+          Duyên Paint
         </Link>
 
         {/* Desktop Links */}
@@ -36,8 +38,8 @@ export const Navbar = () => {
               to={link.path}
               className={`transition-colors duration-300 ${
                 location.pathname === link.path
-                  ? 'text-primary border-b-2 border-secondary pb-1'
-                  : 'text-on-surface-variant hover:text-secondary'
+                  ? (isScrolled ? 'text-primary border-b-2 border-secondary pb-1' : (isHomePage ? 'text-white border-b-2 border-secondary pb-1' : 'text-primary border-b-2 border-secondary pb-1'))
+                  : (isScrolled ? 'text-on-surface-variant hover:text-secondary' : (isHomePage ? 'text-white/80 hover:text-white' : 'text-on-surface-variant hover:text-secondary'))
               }`}
             >
               {link.name}
@@ -46,14 +48,14 @@ export const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="p-2 text-primary hover:text-secondary transition-colors">
+          <button className={`p-2 transition-colors ${isScrolled ? 'text-primary hover:text-secondary' : (isHomePage ? 'text-white hover:text-secondary-fixed-dim' : 'text-primary hover:text-secondary')}`}>
             <Search size={20} />
           </button>
           <button className="hidden sm:block bg-secondary text-on-secondary px-6 py-2 rounded-lg font-headline font-bold scale-95 active:scale-90 transition-transform hover:bg-secondary-container industrial-button">
-            Get a Quote
+            Nhận báo giá
           </button>
           <button 
-            className="md:hidden p-2 text-primary"
+            className={`md:hidden p-2 transition-colors ${isScrolled ? 'text-primary' : (isHomePage ? 'text-white' : 'text-primary')}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -82,7 +84,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               <button className="bg-secondary text-on-secondary w-full py-4 rounded-lg font-bold">
-                Get a Quote
+                Nhận báo giá
               </button>
             </div>
           </motion.div>
@@ -97,7 +99,7 @@ export const Footer = () => {
     <footer className="bg-surface-container-low border-t border-outline-variant/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
-          <div className="text-xl font-bold text-primary font-headline">Master Artisan Paint</div>
+          <div className="text-xl font-bold text-primary font-headline">Duyên Paint</div>
           <p className="text-on-surface-variant font-body text-sm leading-relaxed">
             Nâng tầm không gian sống với những dòng sơn cao cấp từ các thương hiệu hàng đầu thế giới.
           </p>
@@ -120,10 +122,10 @@ export const Footer = () => {
         <div className="space-y-4">
           <h4 className="font-headline font-bold text-primary">Hỗ trợ</h4>
           <ul className="space-y-2 text-sm text-on-surface-variant font-body">
-            <li><Link to="/about" className="hover:text-primary underline underline-offset-4">Expert Advice</Link></li>
-            <li><Link to="#" className="hover:text-primary underline underline-offset-4">Shipping Info</Link></li>
-            <li><Link to="#" className="hover:text-primary underline underline-offset-4">Returns</Link></li>
-            <li><Link to="#" className="hover:text-primary underline underline-offset-4">Privacy Policy</Link></li>
+            <li><Link to="/about" className="hover:text-primary underline underline-offset-4">Tư vấn chuyên gia</Link></li>
+            <li><Link to="#" className="hover:text-primary underline underline-offset-4">Thông tin vận chuyển</Link></li>
+            <li><Link to="#" className="hover:text-primary underline underline-offset-4">Chính sách đổi trả</Link></li>
+            <li><Link to="#" className="hover:text-primary underline underline-offset-4">Chính sách bảo mật</Link></li>
           </ul>
         </div>
 
@@ -137,7 +139,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 border-t border-outline-variant/10 text-center text-on-surface-variant font-body text-xs">
-        © 2024 Master Artisan Paint Retail. Authorized Dulux & Jotun Partner.
+        © 2024 Duyên Paint Retail. Đối tác ủy quyền của Dulux & Jotun.
       </div>
     </footer>
   );

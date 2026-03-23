@@ -6,9 +6,9 @@ const Contact = () => {
   return (
     <div className="pt-28 pb-20 max-w-7xl mx-auto px-6 md:px-8">
       <header className="mb-20">
-        <span className="text-secondary font-label font-bold uppercase tracking-widest text-sm block mb-4">Get in Touch</span>
+        <span className="text-secondary font-label font-bold uppercase tracking-widest text-sm block mb-4">Liên hệ với chúng tôi</span>
         <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-primary tracking-tighter">
-          Let's Start Your <br/>Next <span className="italic text-primary-container">Masterpiece.</span>
+          Hãy bắt đầu <br/>Kiệt tác tiếp theo <span className="italic text-primary-container">của bạn.</span>
         </h1>
       </header>
 
@@ -22,7 +22,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-headline font-bold text-primary text-lg mb-1">Phone & Zalo</h4>
-                <p className="text-on-surface-variant font-body">090 123 4567 (Mr. Artisan)</p>
+                <p className="text-on-surface-variant font-body">090 123 4567 (Ms. Duyên)</p>
                 <p className="text-on-surface-variant font-body">1800-PAINT-01 (Hotline)</p>
               </div>
             </div>
@@ -31,7 +31,7 @@ const Contact = () => {
                 <Mail size={24} />
               </div>
               <div>
-                <h4 className="font-headline font-bold text-primary text-lg mb-1">Email Inquiry</h4>
+                <h4 className="font-headline font-bold text-primary text-lg mb-1">Yêu cầu qua Email</h4>
                 <p className="text-on-surface-variant font-body">consult@masterartisan.com</p>
                 <p className="text-on-surface-variant font-body">sales@masterartisan.com</p>
               </div>
@@ -41,7 +41,7 @@ const Contact = () => {
                 <MapPin size={24} />
               </div>
               <div>
-                <h4 className="font-headline font-bold text-primary text-lg mb-1">Showroom Address</h4>
+                <h4 className="font-headline font-bold text-primary text-lg mb-1">Địa chỉ Showroom</h4>
                 <p className="text-on-surface-variant font-body">123 Đường Kiến Trúc, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
               </div>
             </div>
@@ -49,7 +49,7 @@ const Contact = () => {
 
           {/* Social Links */}
           <div className="pt-8 border-t border-outline-variant">
-            <h4 className="font-headline font-bold text-primary mb-6">Connect with us</h4>
+            <h4 className="font-headline font-bold text-primary mb-6">Kết nối với chúng tôi</h4>
             <div className="flex space-x-4">
               <button className="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                 <MessageCircle size={20} />
@@ -62,19 +62,19 @@ const Contact = () => {
         {/* Contact Form */}
         <div className="lg:col-span-7">
           <div className="bg-surface-container-low p-8 md:p-12 rounded-2xl industrial-shadow">
-            <h3 className="text-2xl font-headline font-bold text-primary mb-8">Send an Inquiry</h3>
+            <h3 className="text-2xl font-headline font-bold text-primary mb-8">Gửi yêu cầu</h3>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-on-surface-variant font-label">Full Name</label>
+                  <label className="text-sm font-bold text-on-surface-variant font-label">Họ và tên</label>
                   <input 
                     type="text" 
-                    placeholder="John Doe"
+                    placeholder="Nguyễn Văn A"
                     className="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none transition-all"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-on-surface-variant font-label">Phone Number</label>
+                  <label className="text-sm font-bold text-on-surface-variant font-label">Số điện thoại</label>
                   <input 
                     type="tel" 
                     placeholder="090 123 4567"
@@ -83,24 +83,24 @@ const Contact = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold text-on-surface-variant font-label">Subject</label>
+                <label className="text-sm font-bold text-on-surface-variant font-label">Chủ đề</label>
                 <select className="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none transition-all">
-                  <option>Product Inquiry</option>
-                  <option>Quotation Request</option>
-                  <option>Technical Consultation</option>
-                  <option>Other</option>
+                  <option>Yêu cầu về sản phẩm</option>
+                  <option>Yêu cầu báo giá</option>
+                  <option>Tư vấn kỹ thuật</option>
+                  <option>Khác</option>
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold text-on-surface-variant font-label">Message</label>
+                <label className="text-sm font-bold text-on-surface-variant font-label">Tin nhắn</label>
                 <textarea 
                   rows={4}
-                  placeholder="Tell us about your project..."
+                  placeholder="Hãy cho chúng tôi biết về dự án của bạn..."
                   className="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none transition-all"
                 ></textarea>
               </div>
               <button className="w-full bg-primary text-on-primary font-headline font-bold py-4 rounded-lg hover:bg-primary-container transition-all flex items-center justify-center gap-3">
-                Send Message
+                Gửi tin nhắn
                 <Send size={18} />
               </button>
             </form>
@@ -113,8 +113,8 @@ const Contact = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-white p-6 rounded-xl shadow-xl text-center max-w-xs relative z-10">
             <MapPin size={32} className="text-secondary mx-auto mb-4" />
-            <h4 className="font-headline font-bold text-primary mb-2">Visit Our Showroom</h4>
-            <p className="text-sm text-on-surface-variant">Experience our full color palette in person.</p>
+            <h4 className="font-headline font-bold text-primary mb-2">Ghé thăm Showroom của chúng tôi</h4>
+            <p className="text-sm text-on-surface-variant">Trải nghiệm trực tiếp bảng màu đầy đủ của chúng tôi.</p>
           </div>
         </div>
         <img 

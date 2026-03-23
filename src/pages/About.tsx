@@ -9,12 +9,12 @@ const About = () => {
       <section className="relative px-6 md:px-8 py-20 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
-            <span className="text-secondary font-label font-bold uppercase tracking-[0.1em] text-sm block mb-4">Established 2019</span>
+            <span className="text-secondary font-label font-bold uppercase tracking-[0.1em] text-sm block mb-4">Thành lập năm 2019</span>
             <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-primary leading-tight tracking-tighter mb-8">
-              The Master Artisan <br/>of Architectural <span className="italic text-primary-container">Finishes.</span>
+              Duyên Paint <br/>Hoàn thiện <span className="italic text-primary-container">Kiến trúc.</span>
             </h1>
             <p className="text-xl text-on-surface-variant leading-relaxed max-w-2xl">
-              For half a decade, we have been the silent partner behind the region's most prestigious interiors. We don't just sell paint; we curate the medium for your architectural vision.
+              Trong nửa thập kỷ qua, chúng tôi là đối tác thầm lặng đằng sau những nội thất danh giá nhất khu vực. Chúng tôi không chỉ bán sơn; chúng tôi tuyển chọn phương tiện cho tầm nhìn kiến trúc của bạn.
             </p>
           </div>
           <div className="lg:col-span-5 relative">
@@ -28,7 +28,7 @@ const About = () => {
             </div>
             <div className="absolute -bottom-8 -left-8 bg-primary p-8 rounded-lg industrial-shadow hidden md:block">
               <div className="text-on-primary font-headline font-black text-5xl">05</div>
-              <div className="text-on-primary font-label text-sm uppercase tracking-widest mt-2">Years of Precision</div>
+              <div className="text-on-primary font-label text-sm uppercase tracking-widest mt-2">Năm của sự chính xác</div>
             </div>
           </div>
         </div>
@@ -40,23 +40,23 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="space-y-6">
               <ShieldCheck size={40} className="text-secondary" />
-              <h3 className="text-2xl font-headline font-bold text-primary">Uncompromising Authenticity</h3>
+              <h3 className="text-2xl font-headline font-bold text-primary">Tính xác thực không thỏa hiệp</h3>
               <p className="text-on-surface-variant leading-relaxed">
-                As authorized Dulux and Jotun partners, every drop of paint in our warehouse is certified original. We maintain strict temperature controls to ensure chemical integrity.
+                Là đối tác ủy quyền của Dulux và Jotun, mỗi giọt sơn trong kho của chúng tôi đều được chứng nhận chính hãng. Chúng tôi duy trì kiểm soát nhiệt độ nghiêm ngặt để đảm bảo tính toàn vẹn hóa học.
               </p>
             </div>
             <div className="space-y-6">
               <Ruler size={40} className="text-secondary" />
-              <h3 className="text-2xl font-headline font-bold text-primary">Free Technical Consultation</h3>
+              <h3 className="text-2xl font-headline font-bold text-primary">Tư vấn kỹ thuật miễn phí</h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Our experts don't just pick colors; we analyze substrate conditions, light orientation, and climate factors to recommend the perfect coating system for your project.
+                Các chuyên gia của chúng tôi không chỉ chọn màu sắc; chúng tôi phân tích tình trạng bề mặt, hướng ánh sáng và các yếu tố khí hậu để đề xuất hệ thống sơn phủ hoàn hảo cho dự án của bạn.
               </p>
             </div>
             <div className="space-y-6">
               <Package size={40} className="text-secondary" />
-              <h3 className="text-2xl font-headline font-bold text-primary">Artisan Mixing Hub</h3>
+              <h3 className="text-2xl font-headline font-bold text-primary">Trung tâm pha màu Duyên</h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Utilizing industry-leading tinting technology, we provide exact color matching and batch consistency that industrial-scale retailers often overlook.
+                Sử dụng công nghệ pha màu hàng đầu ngành, chúng tôi cung cấp khả năng phối màu chính xác và tính nhất quán của lô hàng mà các nhà bán lẻ quy mô công nghiệp thường bỏ qua.
               </p>
             </div>
           </div>
@@ -67,25 +67,25 @@ const About = () => {
       <section className="py-24 max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>
-            <span className="text-secondary font-label font-bold uppercase tracking-[0.1em] text-sm block mb-4">Our Partners</span>
-            <h2 className="text-4xl font-headline font-extrabold text-primary">Authorized Distribution.</h2>
+            <span className="text-secondary font-label font-bold uppercase tracking-[0.1em] text-sm block mb-4">Đối tác của chúng tôi</span>
+            <h2 className="text-4xl font-headline font-extrabold text-primary">Phân phối ủy quyền.</h2>
           </div>
           <div className="max-w-md text-right">
-            <p className="text-on-surface-variant">We partner exclusively with global leaders in coating technology to ensure our clients receive the most durable and vibrant results possible.</p>
+            <p className="text-on-surface-variant">Chúng tôi hợp tác độc quyền với các nhà lãnh đạo toàn cầu về công nghệ sơn phủ để đảm bảo khách hàng của chúng tôi nhận được kết quả bền bỉ và rực rỡ nhất có thể.</p>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-surface-container-lowest p-12 rounded-xl flex items-center justify-between group cursor-pointer border-b-4 border-transparent hover:border-primary transition-all duration-300">
             <div>
               <h4 className="text-3xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Dulux</h4>
-              <p className="mt-2 text-on-surface-variant">Premium Decorative Solutions</p>
+              <p className="mt-2 text-on-surface-variant">Giải pháp trang trí cao cấp</p>
             </div>
             <ArrowRight size={48} className="text-surface-container-highest group-hover:text-primary transition-colors" />
           </div>
           <div className="bg-surface-container-lowest p-12 rounded-xl flex items-center justify-between group cursor-pointer border-b-4 border-transparent hover:border-primary transition-all duration-300">
             <div>
               <h4 className="text-3xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Jotun</h4>
-              <p className="mt-2 text-on-surface-variant">Industrial & Marine Excellence</p>
+              <p className="mt-2 text-on-surface-variant">Sự xuất sắc trong công nghiệp & hàng hải</p>
             </div>
             <ArrowRight size={48} className="text-surface-container-highest group-hover:text-primary transition-colors" />
           </div>
@@ -104,7 +104,7 @@ const About = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-8">
-                <p className="text-on-primary font-headline font-bold text-lg">Main Distribution Hub</p>
+                <p className="text-on-primary font-headline font-bold text-lg">Trung tâm phân phối chính</p>
               </div>
             </div>
             <div className="md:col-span-2 bg-surface-container-lowest rounded-xl overflow-hidden">
@@ -126,7 +126,7 @@ const About = () => {
             <div className="bg-primary flex items-center justify-center p-8 rounded-xl">
               <div className="text-center">
                 <span className="text-on-primary font-headline font-black text-4xl block">500+</span>
-                <span className="text-on-primary/80 font-label text-xs uppercase tracking-widest">Shades Available</span>
+                <span className="text-on-primary/80 font-label text-xs uppercase tracking-widest">Màu sắc có sẵn</span>
               </div>
             </div>
           </div>

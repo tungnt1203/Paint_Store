@@ -24,9 +24,9 @@ const ProductDetail = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* Breadcrumbs */}
         <nav className="flex items-center space-x-2 text-sm font-label text-on-surface-variant mb-12">
-          <Link to="/" className="hover:text-primary">Home</Link>
+          <Link to="/" className="hover:text-primary">Trang chủ</Link>
           <ChevronRight size={14} />
-          <Link to="/catalog" className="hover:text-primary">Catalog</Link>
+          <Link to="/catalog" className="hover:text-primary">Danh mục</Link>
           <ChevronRight size={14} />
           <span className="text-primary font-bold">{product.name}</span>
         </nav>

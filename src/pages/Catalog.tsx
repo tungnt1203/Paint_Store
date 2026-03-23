@@ -26,9 +26,9 @@ const Catalog = () => {
     <div className="pt-28 pb-20 max-w-7xl mx-auto px-6 md:px-8">
       {/* Editorial Header */}
       <header className="mb-16">
-        <p className="text-secondary font-label font-semibold tracking-widest uppercase mb-2">PREMIUM SELECTION</p>
+        <p className="text-secondary font-label font-semibold tracking-widest uppercase mb-2">LỰA CHỌN CAO CẤP</p>
         <h1 className="font-headline font-extrabold text-5xl md:text-6xl text-primary tracking-tight max-w-3xl">
-          The Architectural <br/><span className="text-on-surface-variant italic">Color Catalog.</span>
+          Danh mục <br/><span className="text-on-surface-variant italic">Màu sắc Kiến trúc.</span>
         </h1>
       </header>
 
@@ -83,8 +83,8 @@ const Catalog = () => {
           {/* Expert Advice Banner */}
           <div className="bg-surface-container-high p-8 rounded-xl relative overflow-hidden">
             <div className="relative z-10">
-              <p className="text-primary font-bold text-sm mb-2">Expert Advice</p>
-              <h4 className="font-headline font-bold text-xl mb-4 leading-tight">Need help choosing colors?</h4>
+              <p className="text-primary font-bold text-sm mb-2">Tư vấn chuyên gia</p>
+              <h4 className="font-headline font-bold text-xl mb-4 leading-tight">Cần giúp đỡ chọn màu sắc?</h4>
               <button className="text-secondary font-bold text-sm flex items-center group">
                 Liên hệ tư vấn
                 <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -110,7 +110,7 @@ const Catalog = () => {
           {filteredProducts.length > 0 && (
             <div className="mt-20 flex justify-center">
               <button className="bg-surface-container-high hover:bg-surface-container-highest text-primary font-bold px-10 py-4 rounded-md transition-all">
-                Load More Products
+                Tải thêm sản phẩm
               </button>
             </div>
           )}

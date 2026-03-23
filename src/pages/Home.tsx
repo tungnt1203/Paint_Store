@@ -19,12 +19,12 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="z-10"
           >
-            <span className="text-secondary-fixed-dim font-headline font-extrabold uppercase tracking-[0.2em] text-sm mb-4 block">Authorized Retailer</span>
+            <span className="text-secondary-fixed-dim font-headline font-extrabold uppercase tracking-[0.2em] text-sm mb-4 block">Đại lý ủy quyền</span>
             <h1 className="text-white font-headline font-extrabold text-5xl md:text-7xl leading-[1.1] tracking-tight mb-8">
               Chuyên sơn chính hãng <span className="italic text-primary-fixed-dim">Dulux, Jotun…</span>
             </h1>
             <p className="text-primary-fixed-dim text-lg md:text-xl max-w-md mb-10 font-light leading-relaxed">
-              Elevate your architectural vision with premium finishes and technical expertise.
+              Nâng tầm tầm nhìn kiến trúc của bạn với các lớp hoàn thiện cao cấp và chuyên môn kỹ thuật.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/catalog" className="bg-secondary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-secondary-container transition-all flex items-center gap-3">
@@ -64,7 +64,7 @@ const Home = () => {
             </div>
             <div>
               <h3 className="font-headline font-extrabold text-primary text-xl">Chính hãng</h3>
-              <p className="text-on-surface-variant font-body">100% authorized partner of Dulux & Jotun.</p>
+              <p className="text-on-surface-variant font-body">Đối tác ủy quyền 100% của Dulux & Jotun.</p>
             </div>
           </div>
           <div className="flex items-center gap-6">
@@ -73,7 +73,7 @@ const Home = () => {
             </div>
             <div>
               <h3 className="font-headline font-extrabold text-primary text-xl">Giá tốt</h3>
-              <p className="text-on-surface-variant font-body">Competitive wholesale pricing for retailers.</p>
+              <p className="text-on-surface-variant font-body">Giá bán buôn cạnh tranh cho các đại lý.</p>
             </div>
           </div>
           <div className="flex items-center gap-6">
@@ -82,7 +82,7 @@ const Home = () => {
             </div>
             <div>
               <h3 className="font-headline font-extrabold text-primary text-xl">Giao nhanh</h3>
-              <p className="text-on-surface-variant font-body">Same-day delivery for all city projects.</p>
+              <p className="text-on-surface-variant font-body">Giao hàng trong ngày cho tất cả các dự án trong thành phố.</p>
             </div>
           </div>
         </div>
@@ -91,8 +91,8 @@ const Home = () => {
       {/* Collections Section */}
       <section className="px-6 md:px-8 max-w-7xl mx-auto">
         <div className="mb-20">
-          <span className="text-secondary font-headline font-extrabold uppercase tracking-widest text-sm mb-2 block">Collections</span>
-          <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter">Essential Solutions</h2>
+          <span className="text-secondary font-headline font-extrabold uppercase tracking-widest text-sm mb-2 block">Bộ sưu tập</span>
+          <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter">Giải pháp thiết yếu</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-highest min-h-[400px]">
@@ -104,9 +104,9 @@ const Home = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-12">
               <h3 className="text-white text-3xl font-headline font-bold mb-4">Sơn nội thất</h3>
-              <p className="text-primary-fixed-dim max-w-md mb-6">Create breathtaking spaces with high-end interior finishes.</p>
+              <p className="text-primary-fixed-dim max-w-md mb-6">Tạo ra không gian ngoạn mục với các lớp hoàn thiện nội thất cao cấp.</p>
               <Link to="/catalog" className="text-secondary-fixed-dim font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                Explore Collection <ArrowRight size={20} />
+                Khám phá bộ sưu tập <ArrowRight size={20} />
               </Link>
             </div>
           </div>
@@ -119,7 +119,7 @@ const Home = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
               <h3 className="text-white text-2xl font-headline font-bold mb-4">Sơn ngoại thất</h3>
-              <Link to="/catalog" className="text-secondary-fixed-dim font-bold flex items-center gap-2">View Catalog</Link>
+              <Link to="/catalog" className="text-secondary-fixed-dim font-bold flex items-center gap-2">Xem danh mục</Link>
             </div>
           </div>
           <div className="md:col-span-12 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[300px]">
@@ -131,7 +131,7 @@ const Home = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent flex flex-col justify-center p-12">
               <h3 className="text-white text-3xl font-headline font-bold mb-4">Sơn chống thấm</h3>
-              <p className="text-primary-fixed-dim max-w-sm">Extreme durability for tropical climates.</p>
+              <p className="text-primary-fixed-dim max-w-sm">Độ bền cực cao cho khí hậu nhiệt đới.</p>
             </div>
           </div>
         </div>
@@ -142,11 +142,11 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-end mb-16">
             <div>
-              <span className="text-secondary font-headline font-extrabold uppercase tracking-widest text-sm mb-2 block">Bestsellers</span>
-              <h2 className="text-4xl font-headline font-black text-primary tracking-tighter">Featured Products</h2>
+              <span className="text-secondary font-headline font-extrabold uppercase tracking-widest text-sm mb-2 block">Sản phẩm bán chạy</span>
+              <h2 className="text-4xl font-headline font-black text-primary tracking-tighter">Sản phẩm nổi bật</h2>
             </div>
             <Link to="/catalog" className="hidden md:flex items-center gap-2 text-primary font-bold border-b-2 border-primary">
-              See All Products <ArrowRight size={20} />
+              Xem tất cả sản phẩm <ArrowRight size={20} />
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
