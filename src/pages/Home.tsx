@@ -20,7 +20,8 @@ import {
   COLOR_PALETTE, 
   PROJECTS, 
   BLOG_POSTS, 
-  SERVICES 
+  SERVICES,
+  BRANDS 
 } from '../constants';
 import { ProductCard } from '../components/Layout';
 
@@ -111,15 +112,20 @@ const Home = () => {
       {/* SECTION 2 – Bảng màu sơn */}
       <section id="color-palette" className="py-32 bg-surface px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter mb-4">Khám phá bảng màu</h2>
-            <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">Chọn gam màu yêu thích và xem trước không gian sống của bạn sẽ thay đổi như thế nào.</p>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter mb-4">Khám phá bảng màu</h2>
+              <p className="text-on-surface-variant text-lg">Chọn gam màu yêu thích và xem trước không gian sống của bạn sẽ thay đổi như thế nào.</p>
+            </div>
+            <Link to="/colors" className="bg-primary text-white px-8 py-4 rounded-full font-headline font-bold hover:bg-secondary transition-all shadow-xl shadow-primary/20">
+              Xem tất cả màu sắc
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Color Grid */}
             <div className="lg:col-span-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
-              {COLOR_PALETTE.map((color) => (
+              {COLOR_PALETTE.slice(0, 6).map((color) => (
                 <button
                   key={color.id}
                   onClick={() => setActiveColor(color)}
@@ -137,6 +143,9 @@ const Home = () => {
                   <p className="text-xs text-on-surface-variant">{color.code}</p>
                 </button>
               ))}
+              <Link to="/colors" className="col-span-full mt-4 flex items-center justify-center gap-2 p-6 rounded-3xl border-2 border-dashed border-outline-variant/30 text-on-surface-variant font-bold hover:border-primary hover:text-primary transition-all group">
+                Khám phá thêm 2000+ màu <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
 
             {/* Preview Area */}
@@ -259,6 +268,39 @@ const Home = () => {
         {/* Background decorative text */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-white/[0.03] whitespace-nowrap pointer-events-none select-none">
           TRUST & QUALITY
+        </div>
+      </section>
+
+      {/* NEW SECTION – Danh sách các hãng sơn */}
+      <section className="py-24 bg-surface-container-lowest border-y border-outline-variant/10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-primary tracking-tighter mb-4">Đối tác chiến lược</h2>
+            <p className="text-on-surface-variant text-base max-w-2xl mx-auto">Duyên Paint tự hào là nhà phân phối chính hãng của các thương hiệu sơn hàng đầu thế giới.</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 items-center">
+            {BRANDS.map((brand) => (
+              <motion.div
+                key={brand.id}
+                whileHover={{ y: -10 }}
+                className="flex flex-col items-center group cursor-pointer"
+              >
+                <div className="w-full aspect-video bg-white rounded-2xl p-6 flex items-center justify-center shadow-sm border border-outline-variant/10 group-hover:shadow-xl group-hover:border-primary/20 transition-all duration-500 overflow-hidden">
+                  <img 
+                    src={brand.logo} 
+                    alt={brand.name} 
+                    className="max-w-full max-h-full object-contain transition-all duration-500 group-hover:scale-110"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <div className="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h4 className="text-sm font-headline font-black text-primary">{brand.name}</h4>
+                  <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">{brand.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

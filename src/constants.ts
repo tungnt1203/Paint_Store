@@ -176,6 +176,39 @@ export const PRODUCTS: Product[] = [
   }
 ];
 
+export const BRANDS = [
+  {
+    id: 'dulux',
+    name: 'Dulux',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Dulux_logo.svg/2560px-Dulux_logo.svg.png',
+    description: 'Thương hiệu sơn hàng đầu thế giới từ AkzoNobel.'
+  },
+  {
+    id: 'jotun',
+    name: 'Jotun',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Jotun_logo.svg/512px-Jotun_logo.svg.png',
+    description: 'Giải pháp sơn tối ưu từ Na Uy cho mọi công trình.'
+  },
+  {
+    id: 'nippon',
+    name: 'Nippon Paint',
+    logo: 'https://nipponpaint.com.vn/sites/default/files/nippon-paint-logo.png',
+    description: 'Sơn đâu cũng đẹp với công nghệ Nhật Bản.'
+  },
+  {
+    id: 'kova',
+    name: 'Kova',
+    logo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDNhaDPjgHOn22QEcbfT8sn0SlU7UFw_xHYeZnCZ7bTDQ0t1u80ppCFREZ9MOZ6VQU6wupAelmLvn8Z54r8s-XIh06B3R9SjR9oqt_Gr_OYRe-ep3SLiZv1tGmYvoygXCkxW27lCjCMcUFTCulukwxsCr3kQ0b5VLkfA4CpxOALIA62Mc0RfeOLkDpnc_vVzpQBo34TlMaAdGddBsqLaRSfiInMOpO8GYCOFjx_Fekig5ZX7v2WKdFPnTrhnUKGH6aG_R0SxK16i0',
+    description: 'Thương hiệu sơn Việt vươn tầm thế giới.'
+  },
+  {
+    id: 'toa',
+    name: 'TOA Paint',
+    logo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDlA3c8Ck9gqh5767NNXPQvrNj3AtHW9OoPlGMnl6aXjsEhdwQhMxcUM4ppqUCsassNTdJi1tFj7Om8fbQSP8YEtif9V2pfWEEYMvTUkre5lGHVojdDoIIDmUPNlR0CFgrpXac80gg5ILP0Etk3W5LaUHQeUQsWbp_UU2f6sLtdsRJ63U8OLx1UJ1hW3DrXyLrUd1jwLx3RSZUdEBaZq79ZiHigdj-aGt9jAmeDIZtsqdM_kZz47viSszMuXA3KhNHXUlhWqkdW0hQ',
+    description: 'Sơn số 1 Thái Lan với công nghệ tiên tiến.'
+  }
+];
+
 export const COLOR_PALETTE = [
   {
     id: 'white',

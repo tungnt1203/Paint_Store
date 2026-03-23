@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Navbar, Footer, FloatingActions } from './components/Layout';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
+import ColorPalette from './pages/ColorPalette';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import ProductDetail from './pages/ProductDetail';
@@ -18,6 +19,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/catalog" element={<Catalog />} />
+              <Route path="/colors" element={<ColorPalette />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/product/:id" element={<ProductDetail />} />

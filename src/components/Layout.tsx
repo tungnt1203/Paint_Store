@@ -17,7 +17,7 @@ export const Navbar = () => {
   const navLinks = [
     { name: 'Trang chủ', path: '/' },
     { name: 'Sản phẩm', path: '/catalog' },
-    { name: 'Bảng màu', path: '/#color-palette' },
+    { name: 'Bảng màu', path: '/colors' },
     { name: 'Blog', path: '/#blog' },
     { name: 'Liên hệ', path: '/contact' },
   ];
