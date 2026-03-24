@@ -275,11 +275,11 @@ const Home = () => {
       <section className="py-24 bg-surface-container-lowest border-y border-outline-variant/10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-primary tracking-tighter mb-4">Đối tác chiến lược</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-primary tracking-tighter mb-4">Thương hiệu chúng tôi phân phối</h2>
             <p className="text-on-surface-variant text-base max-w-2xl mx-auto">Duyên Paint tự hào là nhà phân phối chính hãng của các thương hiệu sơn hàng đầu thế giới.</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center">
             {BRANDS.map((brand) => (
               <motion.div
                 key={brand.id}

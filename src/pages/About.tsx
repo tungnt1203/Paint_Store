@@ -80,7 +80,7 @@ const About = () => {
       <section className="py-32 max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
           <div className="max-w-2xl">
-            <span className="text-secondary font-headline font-black uppercase tracking-[0.3em] text-sm block mb-6">Đối tác chiến lược</span>
+            <span className="text-secondary font-headline font-black uppercase tracking-[0.3em] text-sm block mb-6">Thương hiệu chúng tôi phân phối</span>
             <h2 className="text-5xl md:text-6xl font-headline font-black text-primary tracking-tighter leading-none">Phân phối ủy quyền toàn cầu.</h2>
           </div>
           <div className="max-w-md text-right hidden md:block">
@@ -101,6 +101,24 @@ const About = () => {
             <div>
               <h3 className="text-5xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Jotun</h3>
               <p className="mt-4 text-on-surface-variant font-bold text-lg">Sự xuất sắc trong công nghiệp</p>
+            </div>
+            <div className="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+              <ArrowRight size={32} />
+            </div>
+          </div>
+          <div className="bg-surface p-16 rounded-[3rem] flex items-center justify-between group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
+            <div>
+              <h3 className="text-5xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Nippon</h3>
+              <p className="mt-4 text-on-surface-variant font-bold text-lg">Công nghệ Nhật Bản</p>
+            </div>
+            <div className="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+              <ArrowRight size={32} />
+            </div>
+          </div>
+          <div className="bg-surface p-16 rounded-[3rem] flex items-center justify-between group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
+            <div>
+              <h3 className="text-5xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Kova</h3>
+              <p className="mt-4 text-on-surface-variant font-bold text-lg">Sơn Việt vươn tầm thế giới</p>
             </div>
             <div className="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
               <ArrowRight size={32} />

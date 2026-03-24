@@ -1,6 +1,6 @@
 # Duyên Paint - Danh mục Sơn Kiến trúc Cao cấp
 
-Duyên Paint là một ứng dụng web chuyên nghiệp giới thiệu danh mục sơn kiến trúc cao cấp và cung cấp dịch vụ tư vấn chuyên sâu. Ứng dụng tập trung vào việc giới thiệu các dòng sản phẩm từ các thương hiệu hàng đầu thế giới như Dulux, Jotun, Nippon Paint, Kova và TOA.
+Duyên Paint là một ứng dụng web chuyên nghiệp giới thiệu danh mục sơn kiến trúc cao cấp và cung cấp dịch vụ tư vấn chuyên sâu. Ứng dụng tập trung vào việc giới thiệu các dòng sản phẩm từ các thương hiệu hàng đầu thế giới như Dulux, Jotun, Nippon Paint và Kova.
 
 ## 🚀 Tính năng chính
 
