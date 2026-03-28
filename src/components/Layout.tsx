@@ -87,11 +87,11 @@ const MainHeader = () => (
 const NavigationBar = () => {
   const location = useLocation();
   const navLinks = [
-    { name: 'Thương hiệu sơn', path: '/#brands' },
+    { name: 'Thương hiệu sơn', path: '/' },
     { name: 'Sản phẩm', path: '/catalog' },
-    { name: 'Bảng giá', path: '/#pricing' },
+    { name: 'Bảng giá', path: '/' },
     { name: 'Bảng màu', path: '/' },
-    { name: 'Vận chuyển', path: '/#shipping' },
+    { name: 'Vận chuyển', path: '/' },
   ];
 
   return (
