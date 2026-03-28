@@ -90,7 +90,7 @@ const NavigationBar = () => {
     { name: 'Thương hiệu sơn', path: '/#brands' },
     { name: 'Sản phẩm', path: '/catalog' },
     { name: 'Bảng giá', path: '/#pricing' },
-    { name: 'Bảng màu', path: '/colors' },
+    { name: 'Bảng màu', path: '/' },
     { name: 'Vận chuyển', path: '/#shipping' },
   ];
 
