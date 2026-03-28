@@ -92,6 +92,7 @@ const NavigationBar = () => {
     { name: 'Bảng giá', path: '/' },
     { name: 'Bảng màu', path: '/' },
     { name: 'Vận chuyển', path: '/' },
+    { name: 'Liên hệ', path: '/contact' },
   ];
 
   return (
@@ -160,9 +161,9 @@ export const Navbar = () => {
   const mobileNavLinks = [
     { name: 'Thương hiệu sơn', path: '/' },
     { name: 'Sản phẩm', path: '/catalog' },
-    { name: 'Bảng giá', path: '/#pricing' },
+    { name: 'Bảng giá', path: '/' },
     { name: 'Bảng màu', path: '/' },
-    { name: 'Vận chuyển', path: '/#shipping' },
+    { name: 'Vận chuyển', path: '/' },
     { name: 'Liên hệ', path: '/contact' },
   ];
 
