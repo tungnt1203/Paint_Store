@@ -117,6 +117,59 @@ const Home = () => {
         </div>
       </section>
 
+      {/* SECTION 1.5 – Giới thiệu */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter uppercase mb-8">
+                Giới thiệu về Đại lý chúng tôi
+              </h2>
+              <div className="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+                <p>
+                  Chào mừng quý khách đến với <strong>{CONTACT_INFO.fullName}</strong>. Chúng tôi tự hào là tổng đại lý phân phối sơn chính hãng hàng đầu, mang đến giải pháp hoàn thiện tối ưu cho mọi công trình kiến trúc.
+                </p>
+                <p>
+                  Với nhiều năm kinh nghiệm trong ngành, chúng tôi cam kết cung cấp những sản phẩm chất lượng nhất từ các thương hiệu danh tiếng như Dulux, Jotun, Nippon, Kova... cùng dịch vụ tư vấn chuyên nghiệp, tận tâm.
+                </p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-8"
+            >
+              <div className="bg-surface-container-low p-8 rounded-3xl text-center hover:bg-primary hover:text-white transition-all duration-500 group">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20">
+                  <Truck size={32} className="text-primary group-hover:text-white" />
+                </div>
+                <h3 className="font-headline font-bold text-lg mb-2">Giao hàng toàn quốc</h3>
+              </div>
+              
+              <div className="bg-surface-container-low p-8 rounded-3xl text-center hover:bg-primary hover:text-white transition-all duration-500 group">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20">
+                  <CheckCircle2 size={32} className="text-primary group-hover:text-white" />
+                </div>
+                <h3 className="font-headline font-bold text-lg mb-2">Thanh toán dễ dàng</h3>
+              </div>
+              
+              <div className="bg-surface-container-low p-8 rounded-3xl text-center hover:bg-primary hover:text-white transition-all duration-500 group">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20">
+                  <Phone size={32} className="text-primary group-hover:text-white" />
+                </div>
+                <h3 className="font-headline font-bold text-lg mb-2">Tư vấn miễn phí 24/7</h3>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 2 – Sơn Nước và Bột Trét */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -182,24 +235,56 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 3 – Sản phẩm nổi bật */}
+      {/* SECTION 2.6 – Sơn dầu */}
       <section className="py-24 px-6 md:px-12 bg-surface-container-lowest">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-end mb-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter mb-4">Sản phẩm nổi bật</h2>
-              <p className="text-on-surface-variant text-lg">Top những sản phẩm được khách hàng tin dùng nhất tại {CONTACT_INFO.name}.</p>
-            </div>
-            <Link to="/catalog" className="hidden md:flex items-center gap-2 text-primary font-bold group">
-              Xem tất cả
-              <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-headline font-black text-primary tracking-tighter uppercase mb-4">
+              Sơn dầu cho gỗ và kim loại
+            </h2>
+            <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
+              Bảo vệ và làm đẹp bề mặt gỗ, kim loại với độ bóng cao và khả năng chống rỉ sét vượt trội.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {PRODUCTS.slice(0, 8).map(product => (
+            {PRODUCTS.filter(p => p.category === 'Sơn dầu').slice(0, 4).map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+            <Link to="/catalog" className="inline-flex items-center gap-2 bg-surface-container-low text-primary px-10 py-4 rounded-full font-headline font-bold hover:bg-primary hover:text-white transition-all group">
+              Tất cả sơn dầu
+              <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2.7 – Sơn Epoxy */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-headline font-black text-primary tracking-tighter uppercase mb-4">
+              Epoxy cho sàn bê tông và kim loại
+            </h2>
+            <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
+              Giải pháp bảo vệ bề mặt công nghiệp, chịu mài mòn, va đập và chống ăn mòn vượt trội.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {PRODUCTS.filter(p => p.category === 'Sơn Epoxy').slice(0, 4).map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+            <Link to="/catalog" className="inline-flex items-center gap-2 bg-surface-container-low text-primary px-10 py-4 rounded-full font-headline font-bold hover:bg-primary hover:text-white transition-all group">
+              Tất cả sơn Epoxy
+              <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
@@ -307,7 +392,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-end mb-16">
             <div>
-              <h2 className="text-4xl font-headline font-black text-primary tracking-tighter mb-4">Kiến thức sơn nhà</h2>
+              <h2 className="text-4xl font-headline font-black text-primary tracking-tighter mb-4 uppercase">Tư vấn - cách chọn và thi công sơn</h2>
               <p className="text-on-surface-variant">Cập nhật xu hướng màu sắc và kỹ thuật thi công mới nhất.</p>
             </div>
             <Link to="/about" className="hidden md:flex items-center gap-2 text-primary font-bold group">

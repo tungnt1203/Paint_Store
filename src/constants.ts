@@ -133,6 +133,27 @@ export const PRODUCTS: Product[] = [
     ]
   },
   {
+    id: '4b',
+    name: 'Sơn dầu Tilac Nippon',
+    brand: 'Nippon Paint',
+    category: 'Sơn dầu',
+    price: 720000,
+    image: 'https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=800',
+    description: 'Sơn dầu gốc Alkyd cho bề mặt gỗ và kim loại nội ngoại thất.',
+    specs: {
+      'Thương hiệu': 'Nippon Nhật Bản',
+      'Độ phủ': '10-12 m²/lít/lớp',
+      'Thời gian khô': '3-5 giờ',
+      'Số lớp sơn': '2 lớp'
+    },
+    features: [
+      'Độ bóng cao',
+      'Chống rêu mốc',
+      'Màng sơn đanh chắc',
+      'Đa dạng màu sắc'
+    ]
+  },
+  {
     id: '5',
     name: 'Sơn Epoxy Kova KL-5',
     brand: 'Kova',
@@ -194,6 +215,27 @@ export const PRODUCTS: Product[] = [
       'Chống rêu mốc',
       'Dễ thi công'
     ]
+  },
+  {
+    id: '8',
+    name: 'Sơn Epoxy Jotun Penguard HB',
+    brand: 'Jotun Majestic',
+    category: 'Sơn Epoxy',
+    price: 2850000,
+    image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800',
+    description: 'Sơn Epoxy hai thành phần cho sắt thép và kim loại, chống ăn mòn cực tốt.',
+    specs: {
+      'Thương hiệu': 'Jotun Na Uy',
+      'Độ phủ': '6-8 m²/lít/lớp',
+      'Thời gian khô': '8 giờ',
+      'Số lớp sơn': '2 lớp'
+    },
+    features: [
+      'Chống ăn mòn cực tốt',
+      'Bám dính tuyệt vời',
+      'Chịu va đập mạnh',
+      'Bền bỉ trong môi trường khắc nghiệt'
+    ]
   }
 ];
 
@@ -238,7 +280,7 @@ export const BRANDS = [
 
 export const CONTACT_INFO = {
   name: 'Sơn Ngân',
-  fullName: 'Sơn Ngân Paint',
+  fullName: 'Công ty TNHH TM & DV Sơn Ngân',
   headerTitle: 'Tổng đại lý sơn chính hãng',
   address: '302A Nguyễn Văn Cừ - P. Tân Lập - T. Đắk Lắk',
   phone: '0366.625.695',
