@@ -164,15 +164,15 @@ const ColorPalettePage = () => {
                           const p = PRODUCTS.find(prod => prod.id === id);
                           if (!p) return null;
                           return (
-                            <Link key={id} to={`/product/${id}`} className="flex items-center gap-4 group bg-surface-container-low/50 p-3 rounded-2xl hover:bg-white hover:shadow-md transition-all">
+                            <div key={id} className="flex items-center gap-4 bg-surface-container-low/50 p-3 rounded-2xl">
                               <div className="w-14 h-14 rounded-xl bg-white p-2 overflow-hidden flex-shrink-0 shadow-sm">
                                 <img src={p.image} alt={p.name} className="w-full h-full object-contain mix-blend-multiply" />
                               </div>
                               <div>
                                 <p className="text-[10px] font-black text-secondary uppercase tracking-widest">{p.brand}</p>
-                                <p className="text-sm font-bold text-primary group-hover:text-secondary transition-colors line-clamp-1">{p.name}</p>
+                                <p className="text-sm font-bold text-primary line-clamp-1">{p.name}</p>
                               </div>
-                            </Link>
+                            </div>
                           );
                         })}
                       </div>

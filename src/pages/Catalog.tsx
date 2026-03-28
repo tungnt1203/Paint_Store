@@ -107,7 +107,7 @@ const Catalog = () => {
             <div className="relative z-10">
               <p className="text-secondary font-black text-xs uppercase tracking-widest mb-4">Tư vấn chuyên gia</p>
               <h4 className="font-headline font-black text-2xl mb-6 leading-tight">Cần giúp đỡ chọn màu sắc?</h4>
-              <button className="bg-white text-primary px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 group hover:bg-secondary hover:text-white transition-all">
+              <button className="bg-white text-primary px-4 py-2 rounded-full font-bold text-xs flex items-center gap-1.5 group hover:bg-secondary hover:text-white transition-all sm:px-6 sm:py-3 sm:text-sm sm:gap-2">
                 Liên hệ ngay
                 <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>

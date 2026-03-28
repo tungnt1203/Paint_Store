@@ -278,11 +278,23 @@ export const BRANDS = [
   }
 ];
 
+/** Chuỗi tìm kiếm đầy đủ cho Google Maps (geocoding ổn định hơn so với dòng địa chỉ rút gọn) */
+const SHOWROOM_MAP_SEARCH_QUERY =
+  '302A Nguyễn Văn Cừ, Phường Tân Lập, Buôn Ma Thuột, Tỉnh Đắk Lắk, Việt Nam';
+
 export const CONTACT_INFO = {
   name: 'Sơn Ngân',
   fullName: 'Công ty TNHH TM & DV Sơn Ngân',
   headerTitle: 'Tổng đại lý sơn chính hãng',
   address: '302A Nguyễn Văn Cừ - P. Tân Lập - T. Đắk Lắk',
+  /** Tọa độ khu vực Nguyễn Văn Cừ — Tân Lập (đồng bộ với địa chỉ showroom) */
+  map: {
+    lat: 12.6838272,
+    lng: 108.0797846,
+    embedUrl:
+      'https://www.google.com/maps?q=12.6838272%2C108.0797846&z=17&hl=vi&output=embed',
+    openUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SHOWROOM_MAP_SEARCH_QUERY)}`,
+  },
   phone: '0366.625.695',
   phone2: '0377.328.602',
   email: 'contact@sonnganpaint.vn',

@@ -94,11 +94,17 @@ const Home = () => {
             <h2 className="text-white font-headline font-black text-4xl md:text-7xl uppercase tracking-tighter mb-6 drop-shadow-2xl">
               {CONTACT_INFO.bannerSlogan}
             </h2>
-            <div className="flex justify-center gap-4">
-              <Link to="/catalog" className="bg-secondary text-white px-8 py-4 rounded-full font-headline font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 md:gap-4">
+              <Link
+                to="/catalog"
+                className="bg-secondary text-white px-5 py-2.5 text-sm font-headline font-bold rounded-full shadow-xl hover:scale-105 transition-transform sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg"
+              >
                 Xem sản phẩm
               </Link>
-              <a href={`tel:${CONTACT_INFO.phone.replace(/\./g, '')}`} className="bg-white text-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+              <a
+                href={`tel:${CONTACT_INFO.phone.replace(/\./g, '')}`}
+                className="bg-white text-primary px-5 py-2.5 text-sm font-headline font-bold rounded-full shadow-xl hover:scale-105 transition-transform sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg"
+              >
                 Liên hệ ngay
               </a>
             </div>
@@ -443,21 +449,21 @@ const Home = () => {
               Đừng ngần ngại liên hệ với chúng tôi để nhận được sự hỗ trợ tận tình nhất từ các chuyên gia hàng đầu.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6">
               <a 
                 href={`tel:${CONTACT_INFO.phone.replace(/\./g, '')}`} 
-                className="w-full sm:w-auto bg-secondary text-white px-10 py-5 rounded-full font-headline font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 transition-transform shadow-xl shadow-secondary/20"
+                className="w-full sm:w-auto bg-secondary text-white px-5 py-2.5 text-sm font-headline font-bold rounded-full flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-xl shadow-secondary/20 sm:px-7 sm:py-3 sm:text-base sm:gap-2.5 md:px-10 md:py-5 md:text-xl md:gap-3"
               >
-                <Phone size={24} />
+                <Phone className="w-5 h-5 shrink-0 md:w-6 md:h-6" aria-hidden />
                 {CONTACT_INFO.phone}
               </a>
               <a 
                 href={`https://zalo.me/${CONTACT_INFO.phone.replace(/\./g, '')}`} 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-white text-primary px-10 py-5 rounded-full font-headline font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 transition-transform shadow-xl"
+                className="w-full sm:w-auto bg-white text-primary px-5 py-2.5 text-sm font-headline font-bold rounded-full flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-xl sm:px-7 sm:py-3 sm:text-base sm:gap-2.5 md:px-10 md:py-5 md:text-xl md:gap-3"
               >
-                <MessageCircle size={24} />
+                <MessageCircle className="w-5 h-5 shrink-0 md:w-6 md:h-6" aria-hidden />
                 Chat Zalo ngay
               </a>
             </div>

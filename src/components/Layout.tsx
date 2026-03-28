@@ -17,11 +17,11 @@ const Logo = ({ className = "w-24 h-24", showText = false }: { className?: strin
       />
     </div>
     {showText && (
-      <div className="flex flex-col leading-none">
-        <span className="text-3xl font-black tracking-tighter text-[#E61E50] uppercase">
+      <div className="flex flex-col leading-none min-w-0 text-left">
+        <span className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter text-[#E61E50] uppercase truncate max-w-[65vw] sm:max-w-none">
           {CONTACT_INFO.name}
         </span>
-        <span className="text-[10px] font-bold tracking-widest text-[#00AEEF] uppercase mt-1">
+        <span className="text-[9px] sm:text-[10px] font-bold tracking-widest text-[#00AEEF] uppercase mt-1 line-clamp-2">
           {CONTACT_INFO.slogan}
         </span>
       </div>
@@ -30,21 +30,21 @@ const Logo = ({ className = "w-24 h-24", showText = false }: { className?: strin
 );
 
 const TopBar = () => (
-  <div className="bg-white border-b border-outline-variant py-2 px-6 md:px-12">
+  <div className="hidden md:block bg-white border-b border-outline-variant py-2 px-6 md:px-12">
     <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-xs font-medium text-on-surface-variant gap-4">
       <div className="flex items-center gap-4">
         <span className="flex items-center gap-1.5">
-          <MapPin size={14} className="text-primary" />
+          <MapPin size={14} className="text-primary shrink-0" />
           {CONTACT_INFO.address}
         </span>
         <span className="flex items-center gap-1.5">
-          <Mail size={14} className="text-primary" />
+          <Mail size={14} className="text-primary shrink-0" />
           {CONTACT_INFO.email}
         </span>
       </div>
       <div className="flex items-center gap-4">
         <span className="flex items-center gap-1.5">
-          <Phone size={14} className="text-primary" />
+          <Phone size={14} className="text-primary shrink-0" />
           {CONTACT_INFO.phone} - {CONTACT_INFO.phone2}
         </span>
       </div>
@@ -53,7 +53,7 @@ const TopBar = () => (
 );
 
 const MainHeader = () => (
-  <div className="bg-white py-6 px-6 md:px-12">
+  <div className="hidden md:block bg-white py-6 px-6 md:px-12">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <Link to="/" className="flex items-center">
         <Logo className="w-32 h-32" />
@@ -95,9 +95,9 @@ const NavigationBar = () => {
   ];
 
   return (
-    <div className="bg-primary sticky top-0 z-50 shadow-lg">
+    <div className="hidden md:block bg-primary sticky top-0 z-40 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-16">
-        <div className="flex items-center space-x-8 h-full">
+        <div className="flex items-center space-x-6 lg:space-x-8 h-full overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -121,7 +121,7 @@ const NavigationBar = () => {
 };
 
 const ServiceBar = () => (
-  <div className="bg-surface-container-lowest border-b border-outline-variant/10 py-4 px-6 md:px-12">
+  <div className="hidden md:block bg-surface-container-lowest border-b border-outline-variant/10 py-4 px-6 md:px-12">
     <div className="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between items-center gap-8">
       <div className="flex items-center gap-3 group">
         <div className="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
@@ -157,13 +157,23 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navLinks = [
-    { name: 'Trang chủ', path: '/' },
+  const mobileNavLinks = [
+    { name: 'Thương hiệu sơn', path: '/' },
     { name: 'Sản phẩm', path: '/catalog' },
-    { name: 'Bảng màu', path: '/colors' },
-    { name: 'Blog', path: '/#blog' },
+    { name: 'Bảng giá', path: '/#pricing' },
+    { name: 'Bảng màu', path: '/' },
+    { name: 'Vận chuyển', path: '/#shipping' },
     { name: 'Liên hệ', path: '/contact' },
   ];
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <>
@@ -179,39 +189,86 @@ export const Navbar = () => {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            className="fixed inset-0 z-[60] md:hidden bg-white"
+            transition={{ type: 'tween', duration: 0.25 }}
+            className="fixed inset-0 z-[60] md:hidden bg-white flex flex-col h-[100dvh] max-h-[100dvh]"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu điều hướng"
           >
-            <div className="p-6 flex justify-between items-center border-b border-outline-variant">
-              <Link to="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                <Logo showText={true} />
+            <div className="shrink-0 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-3 sm:px-4 sm:pb-4 flex justify-between items-center gap-2 border-b border-outline-variant">
+              <Link
+                to="/"
+                className="flex items-center gap-2 min-w-0"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Logo className="w-11 h-11 shrink-0" showText={true} />
               </Link>
-              <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-primary">
-                <X size={28} />
+              <button
+                type="button"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2.5 text-primary rounded-xl hover:bg-primary/5 min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0"
+                aria-label="Đóng menu"
+              >
+                <X size={24} />
               </button>
             </div>
-            <div className="px-6 py-12 flex flex-col space-y-8 font-headline font-bold text-center">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-3xl ${location.pathname === link.path ? 'text-primary' : 'text-on-surface-variant'}`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
+            <nav className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
+              <p className="text-[10px] font-black text-primary uppercase tracking-widest mb-4 px-1">Danh mục</p>
+              <ul className="flex flex-col gap-1 font-headline font-bold">
+                {mobileNavLinks.map((link) => {
+                  const active =
+                    link.path.startsWith('/#')
+                      ? false
+                      : location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
+                  return (
+                    <li key={`${link.path}-${link.name}`}>
+                      <Link
+                        to={link.path}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`block py-3.5 px-3 rounded-xl text-lg sm:text-xl transition-colors ${
+                          active ? 'bg-primary/10 text-primary' : 'text-on-surface-variant active:bg-surface-container-low'
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              <a
+                href={`tel:${CONTACT_INFO.phone.replace(/\./g, '')}`}
+                className="mt-8 flex items-center justify-center gap-2 w-full py-3.5 rounded-2xl bg-primary text-white font-headline font-bold text-base shadow-lg"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Phone size={20} />
+                Gọi {CONTACT_INFO.phone}
+              </a>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
       
-      {/* Mobile Menu Trigger (Sticky) */}
-      <div className="md:hidden sticky top-0 z-50 bg-white shadow-md p-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
-          <Logo className="w-10 h-10" />
+      {/* Thanh mobile: logo + tên + nút menu */}
+      <div className="md:hidden sticky top-0 z-50 bg-white shadow-md border-b border-outline-variant/30 px-3 pt-[max(0.5rem,env(safe-area-inset-top))] pb-2 flex justify-between items-center gap-2">
+        <Link to="/" className="flex items-center gap-2.5 min-w-0 flex-1">
+          <Logo className="w-11 h-11 shrink-0" />
+          <div className="min-w-0 text-left">
+            <span className="block font-headline font-black text-sm text-[#E61E50] uppercase tracking-tight leading-tight truncate">
+              {CONTACT_INFO.name}
+            </span>
+            <span className="block text-[10px] font-bold text-on-surface-variant/80 truncate">
+              {CONTACT_INFO.headerTitle}
+            </span>
+          </div>
         </Link>
-        <button onClick={() => setIsMobileMenuOpen(true)} className="p-2 text-primary">
-          <Menu size={28} />
+        <button
+          type="button"
+          onClick={() => setIsMobileMenuOpen(true)}
+          className="p-2.5 text-primary rounded-xl hover:bg-primary/5 min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0"
+          aria-expanded={isMobileMenuOpen}
+          aria-label="Mở menu"
+        >
+          <Menu size={24} />
         </button>
       </div>
     </>
@@ -326,7 +383,7 @@ export const ProductCard = ({ product }: { product: any, key?: string }) => {
       whileHover={{ y: -10 }}
       className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-outline-variant/10 flex flex-col h-full group"
     >
-      <Link to={`/product/${product.id}`} className="relative aspect-square overflow-hidden bg-surface-container-low p-6">
+      <div className="relative aspect-square overflow-hidden bg-surface-container-low p-6">
         <img 
           src={product.image} 
           alt={`Sơn ${product.brand} ${product.name} chính hãng`}
@@ -337,14 +394,12 @@ export const ProductCard = ({ product }: { product: any, key?: string }) => {
         <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg text-[10px] font-bold text-primary uppercase tracking-widest shadow-sm">
           {product.brand}
         </div>
-      </Link>
+      </div>
       
       <div className="p-4 flex flex-col flex-grow text-center">
-        <Link to={`/product/${product.id}`}>
-          <h3 className="font-headline font-bold text-base text-primary mb-2 hover:text-secondary transition-colors line-clamp-2 min-h-[3rem]">
-            {product.name}
-          </h3>
-        </Link>
+        <h3 className="font-headline font-bold text-base text-primary mb-2 line-clamp-2 min-h-[3rem]">
+          {product.name}
+        </h3>
         
         <div className="mt-auto">
           <div className="flex flex-col mb-3">

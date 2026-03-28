@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ChevronRight, ShieldCheck, CheckCircle2, Info, ArrowLeft, Phone, ShoppingCart, Droplets, Sparkles, Shield, ArrowRightLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { PRODUCTS, CONTACT_INFO } from '../constants';
 import { ProductCard } from '../components/Layout';
 

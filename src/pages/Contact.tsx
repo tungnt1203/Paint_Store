@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
-import { motion } from 'motion/react';
 import { CONTACT_INFO } from '../constants';
 
 const Contact = () => {
@@ -138,22 +137,38 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Map Placeholder */}
-      <section className="mt-32 h-[450px] bg-surface-container-highest rounded-2xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-xl shadow-xl text-center max-w-xs relative z-10">
-            <MapPin size={32} className="text-secondary mx-auto mb-4" />
-            <h4 className="font-headline font-bold text-primary mb-2">Ghé thăm Showroom của chúng tôi</h4>
-            <p className="text-sm text-on-surface-variant">Trải nghiệm trực tiếp bảng màu đầy đủ của chúng tôi.</p>
+      {/* Google Maps */}
+      <section className="mt-32 space-y-6" aria-labelledby="showroom-map-heading">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <div>
+            <h2 id="showroom-map-heading" className="font-headline font-black text-primary text-2xl md:text-3xl mb-2">
+              Bản đồ showroom
+            </h2>
+            <p className="text-on-surface-variant font-medium flex items-start gap-2 max-w-xl">
+              <MapPin size={20} className="text-secondary flex-shrink-0 mt-0.5" aria-hidden />
+              <span>{CONTACT_INFO.address}</span>
+            </p>
           </div>
+          <a
+            href={CONTACT_INFO.map.openUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 font-headline font-bold text-sm uppercase tracking-wider text-primary border-2 border-primary rounded-2xl px-6 py-3 hover:bg-primary hover:text-white transition-colors shrink-0"
+          >
+            Mở trong Google Maps
+            <MapPin size={18} aria-hidden />
+          </a>
         </div>
-        <img 
-          src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&q=80&w=1200" 
-          alt={`Bản đồ vị trí showroom ${CONTACT_INFO.name}`} 
-          className="w-full h-full object-cover opacity-50"
-          referrerPolicy="no-referrer"
-          loading="lazy"
-        />
+        <div className="h-[min(28rem,70vh)] min-h-[280px] rounded-2xl overflow-hidden border-2 border-outline-variant/15 shadow-xl bg-surface-container-highest relative">
+          <iframe
+            title={`Bản đồ Google Maps — ${CONTACT_INFO.name}, ${CONTACT_INFO.address}`}
+            src={CONTACT_INFO.map.embedUrl}
+            className="absolute inset-0 w-full h-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
       </section>
     </div>
   );
