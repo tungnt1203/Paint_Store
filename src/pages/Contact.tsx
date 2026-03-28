@@ -1,15 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { SeoMeta } from '../components/SeoMeta';
 import { CONTACT_INFO } from '../constants';
 
 const Contact = () => {
   return (
     <div className="pt-28 pb-20 max-w-7xl mx-auto px-6 md:px-8">
       <Helmet>
-        <title>Liên Hệ {CONTACT_INFO.name} - Tư Vấn Báo Giá Sơn Chính Hãng</title>
-        <meta name="description" content={`Liên hệ với ${CONTACT_INFO.name} để nhận tư vấn phối màu và báo giá sơn chính hãng. Địa chỉ showroom tại ${CONTACT_INFO.address}.`} />
-        <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/contact" />
+        <SeoMeta
+          path="/contact"
+          title={`Liên hệ ${CONTACT_INFO.name} - Tư vấn & báo giá sơn chính hãng`}
+          description={`Hotline ${CONTACT_INFO.phone}, ${CONTACT_INFO.phone2}. Showroom ${CONTACT_INFO.address}. Email ${CONTACT_INFO.email}. Tư vấn phối màu, báo giá Dulux, Jotun, Nippon, Kova.`}
+        />
       </Helmet>
       <header className="mb-24 text-center max-w-4xl mx-auto">
         <span className="text-secondary font-headline font-black uppercase tracking-[0.3em] text-sm block mb-6">Liên hệ với chúng tôi</span>

@@ -4,6 +4,7 @@ import { ChevronRight, ShieldCheck, CheckCircle2, Info, ArrowLeft, Phone, Shoppi
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'motion/react';
 import { PRODUCTS, CONTACT_INFO } from '../constants';
+import { canonicalUrl, DEFAULT_OG_IMAGE, SEO_DEFAULT_LOCALE } from '../seo';
 import { ProductCard } from '../components/Layout';
 
 const ProductDetail = () => {
@@ -16,6 +17,10 @@ const ProductDetail = () => {
   if (!product) {
     return (
       <div className="pt-40 pb-20 text-center">
+        <Helmet>
+          <title>Không tìm thấy sản phẩm | {CONTACT_INFO.name}</title>
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
         <h2 className="text-2xl font-bold text-primary">Sản phẩm không tồn tại.</h2>
         <Link to="/catalog" className="text-secondary underline mt-4 inline-block">Quay lại catalog</Link>
       </div>
@@ -23,36 +28,56 @@ const ProductDetail = () => {
   }
 
   const relatedProducts = PRODUCTS.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
+  const pageUrl = canonicalUrl(`/product/${product.id}`);
+  const desc =
+    product.description.length > 155
+      ? `${product.description.slice(0, 152)}…`
+      : product.description;
+  const ogImage = product.image?.startsWith('http') ? product.image : DEFAULT_OG_IMAGE;
+  const offerLd =
+    product.price > 0
+      ? {
+          '@type': 'Offer',
+          url: pageUrl,
+          priceCurrency: 'VND',
+          price: product.price,
+          availability: 'https://schema.org/InStock',
+        }
+      : {
+          '@type': 'Offer',
+          url: pageUrl,
+          priceCurrency: 'VND',
+          availability: 'https://schema.org/PreOrder',
+        };
 
   return (
     <div className="pt-28 pb-20 bg-surface-container-lowest">
       <Helmet>
         <title>{`${product.name} - ${product.brand} | ${CONTACT_INFO.name}`}</title>
-        <meta name="description" content={`${product.name} từ ${product.brand}. ${product.description.substring(0, 150)}...`} />
+        <meta name="description" content={desc} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:site_name" content={CONTACT_INFO.name} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={SEO_DEFAULT_LOCALE} />
+        <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={`${product.name} - ${product.brand} | ${CONTACT_INFO.name}`} />
-        <meta property="og:description" content={product.description} />
-        <meta property="og:image" content={product.image} />
-        <link rel="canonical" href={`https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/product/${product.id}`} />
-        
-        {/* Structured Data */}
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={`${product.name} - ${product.brand}`} />
+        <meta name="twitter:description" content={desc} />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": product.name,
-            "image": product.image,
-            "description": product.description,
-            "brand": {
-              "@type": "Brand",
-              "name": product.brand
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": `https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/product/${product.id}`,
-              "priceCurrency": "VND",
-              "price": product.price,
-              "availability": "https://schema.org/InStock"
-            }
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: product.name,
+            image: product.image,
+            description: product.description,
+            brand: { '@type': 'Brand', name: product.brand },
+            offers: offerLd,
           })}
         </script>
       </Helmet>

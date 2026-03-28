@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
+import { SeoMeta } from '../components/SeoMeta';
 import { 
   PRODUCTS, 
   COLOR_PALETTE, 
@@ -59,8 +60,11 @@ const Home = () => {
   return (
     <div className="space-y-0 pb-0">
       <Helmet>
-        <title>{CONTACT_INFO.fullName} - {CONTACT_INFO.headerTitle}</title>
-        <meta name="description" content={`${CONTACT_INFO.fullName} chuyên cung cấp ${CONTACT_INFO.services.join(', ')} chính hãng. Tư vấn kỹ thuật, giao hàng tận nơi, cam kết chất lượng.`} />
+        <SeoMeta
+          path="/"
+          title={`${CONTACT_INFO.fullName} - ${CONTACT_INFO.headerTitle}`}
+          description={`${CONTACT_INFO.fullName} tại ${CONTACT_INFO.address}. Chuyên ${CONTACT_INFO.services.join(', ')} chính hãng Dulux, Jotun, Nippon, Kova. Tư vấn kỹ thuật, giao hàng toàn quốc.`}
+        />
       </Helmet>
 
       {/* SECTION 1 – Hero Slider */}

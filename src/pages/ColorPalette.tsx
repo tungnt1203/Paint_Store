@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
+import { SeoMeta } from '../components/SeoMeta';
 import { Palette, ChevronRight, Info, ShoppingCart, CheckCircle2, Sparkles, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { COLOR_PALETTE, PRODUCTS, CONTACT_INFO } from '../constants';
@@ -20,9 +21,11 @@ const ColorPalettePage = () => {
   return (
     <div className="pt-28 pb-20 bg-surface-container-lowest min-h-screen">
       <Helmet>
-        <title>Bảng màu sơn chính hãng 2026 | {CONTACT_INFO.name} - Phối màu chuyên nghiệp</title>
-        <meta name="description" content={`Khám phá bảng màu sơn mới nhất 2026 tại ${CONTACT_INFO.name}. Xem trước màu sơn trong không gian thực tế, nhận tư vấn phối màu từ chuyên gia.`} />
-        <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/colors" />
+        <SeoMeta
+          path="/colors"
+          title={`Bảng màu sơn 2026 | ${CONTACT_INFO.name}`}
+          description={`Gợi ý màu sơn nội thất, ngoại thất và tư vấn phối màu tại ${CONTACT_INFO.name}. ${CONTACT_INFO.address}. Liên hệ ${CONTACT_INFO.phone} để nhận bảng màu & báo giá.`}
+        />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">

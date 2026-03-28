@@ -2,15 +2,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ShieldCheck, Ruler, Package, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { SeoMeta } from '../components/SeoMeta';
 import { BRANDS, CONTACT_INFO } from '../constants';
 
 const About = () => {
   return (
     <div className="pt-24">
       <Helmet>
-        <title>Về {CONTACT_INFO.name} - Tổng Đại Lý Phân Phối Sơn Chính Hãng</title>
-        <meta name="description" content={`Tìm hiểu về ${CONTACT_INFO.name}, đại lý ủy quyền các thương hiệu sơn hàng đầu thế giới. Chúng tôi cam kết cung cấp sơn chính hãng và dịch vụ tư vấn kỹ thuật chuyên nghiệp.`} />
-        <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/about" />
+        <SeoMeta
+          path="/about"
+          title={`Về ${CONTACT_INFO.name} - Tổng đại lý sơn chính hãng`}
+          description={`${CONTACT_INFO.fullName} — phân phối Dulux, Jotun, Nippon, Kova và thương hiệu lớn. Cam kết hàng chính hãng, tư vấn kỹ thuật. ${CONTACT_INFO.address}.`}
+        />
       </Helmet>
       {/* Hero Section */}
       <section className="relative px-6 md:px-8 py-24 max-w-7xl mx-auto">
