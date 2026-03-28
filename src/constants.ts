@@ -34,7 +34,7 @@ export const PRODUCTS: Product[] = [
     ],
     gallery: [
       'https://lh3.googleusercontent.com/aida-public/AB6AXuCEnPccMxG42XfFDh41ICp6sz-ufyewQmcRmh-IjOZvWRDydAnrA99-qxwQwVjutu0VDDLtZkygFltfQ0eTHTnv9s_RlnNRDi1SvRn7RWeU6msLLEWkTxajhHPN0TechSbB147Y4HqbwHtTOYDbcR_jfQ7BcVsQ5YqM81LKQ2ptcRFqS-nSnWHefkBKHDqKJrn2VZtVoarcCcSvgnnfJG7mOIddbOfhK82Db-Jk7qK2MpsSpOVDxF4EkUdjBFuJNZr6OGc_UCI3rS0',
-      'https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=800',
+      'https://picsum.photos/seed/paint-gallery/800/600',
       'https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800'
     ]
@@ -117,7 +117,7 @@ export const PRODUCTS: Product[] = [
     brand: 'Jotun Majestic',
     category: 'Sơn dầu',
     price: 850000,
-    image: 'https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=800',
+    image: 'https://picsum.photos/seed/jotun-essence/800/600',
     description: 'Sơn dầu cao cấp bảo vệ bề mặt gỗ và kim loại, nhanh khô và bền màu.',
     specs: {
       'Thương hiệu': 'Jotun Na Uy',
@@ -138,7 +138,7 @@ export const PRODUCTS: Product[] = [
     brand: 'Nippon Paint',
     category: 'Sơn dầu',
     price: 720000,
-    image: 'https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=800',
+    image: 'https://picsum.photos/seed/nippon-tilac/800/600',
     description: 'Sơn dầu gốc Alkyd cho bề mặt gỗ và kim loại nội ngoại thất.',
     specs: {
       'Thương hiệu': 'Nippon Nhật Bản',
@@ -310,7 +310,7 @@ export const CATEGORIES: Category[] = [
     id: 'oil-paint',
     name: 'Sơn dầu',
     description: 'Bảo vệ bề mặt gỗ và kim loại bền bỉ.',
-    image: 'https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=800'
+    image: 'https://picsum.photos/seed/oil-paint-cat/800/600'
   },
   {
     id: 'epoxy-paint',

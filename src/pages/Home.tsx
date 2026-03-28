@@ -33,7 +33,7 @@ const Home = () => {
 
   const heroImages = [
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920",
-    "https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=1920",
+    "https://picsum.photos/seed/paint-hero/1920/1080",
     "https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=1920"
   ];
 

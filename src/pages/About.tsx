@@ -27,7 +27,7 @@ const About = () => {
           <div className="lg:col-span-5 relative">
             <div className="aspect-[4/5] bg-surface-container-highest rounded-[2.5rem] overflow-hidden relative shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=1200" 
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200" 
                 alt={`Showroom ${CONTACT_INFO.name} trưng bày các dòng sơn chính hãng`} 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                 referrerPolicy="no-referrer"
