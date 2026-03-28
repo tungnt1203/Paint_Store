@@ -14,7 +14,6 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Helmet } from 'react-helmet-async';
 import { SeoMeta } from '../components/SeoMeta';
 import { 
   PRODUCTS, 
@@ -59,13 +58,11 @@ const Home = () => {
 
   return (
     <div className="space-y-0 pb-0">
-      <Helmet>
-        <SeoMeta
-          path="/"
-          title={`${CONTACT_INFO.fullName} - ${CONTACT_INFO.headerTitle}`}
-          description={`${CONTACT_INFO.fullName} tại ${CONTACT_INFO.address}. Chuyên ${CONTACT_INFO.services.join(', ')} chính hãng Dulux, Jotun, Nippon, Kova. Tư vấn kỹ thuật, giao hàng toàn quốc.`}
-        />
-      </Helmet>
+      <SeoMeta
+        path="/"
+        title={`${CONTACT_INFO.fullName} - ${CONTACT_INFO.headerTitle}`}
+        description={`${CONTACT_INFO.fullName} tại ${CONTACT_INFO.address}. Chuyên ${CONTACT_INFO.services.join(', ')} chính hãng Dulux, Jotun, Nippon, Kova. Tư vấn kỹ thuật, giao hàng toàn quốc.`}
+      />
 
       {/* SECTION 1 – Hero Slider */}
       <section className="relative h-[60vh] md:h-[80vh] overflow-hidden bg-surface">

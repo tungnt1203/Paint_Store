@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ShieldCheck, Ruler, Package, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { SeoMeta } from '../components/SeoMeta';
@@ -8,13 +7,11 @@ import { BRANDS, CONTACT_INFO } from '../constants';
 const About = () => {
   return (
     <div className="pt-24">
-      <Helmet>
-        <SeoMeta
-          path="/about"
-          title={`Về ${CONTACT_INFO.name} - Tổng đại lý sơn chính hãng`}
-          description={`${CONTACT_INFO.fullName} — phân phối Dulux, Jotun, Nippon, Kova và thương hiệu lớn. Cam kết hàng chính hãng, tư vấn kỹ thuật. ${CONTACT_INFO.address}.`}
-        />
-      </Helmet>
+      <SeoMeta
+        path="/about"
+        title={`Về ${CONTACT_INFO.name} - Tổng đại lý sơn chính hãng`}
+        description={`${CONTACT_INFO.fullName} — phân phối Dulux, Jotun, Nippon, Kova và thương hiệu lớn. Cam kết hàng chính hãng, tư vấn kỹ thuật. ${CONTACT_INFO.address}.`}
+      />
       {/* Hero Section */}
       <section className="relative px-6 md:px-8 py-24 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">

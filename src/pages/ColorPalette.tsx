@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'motion/react';
 import { SeoMeta } from '../components/SeoMeta';
 import { Palette, ChevronRight, Info, ShoppingCart, CheckCircle2, Sparkles, Droplets } from 'lucide-react';
@@ -20,13 +19,11 @@ const ColorPalettePage = () => {
 
   return (
     <div className="pt-28 pb-20 bg-surface-container-lowest min-h-screen">
-      <Helmet>
-        <SeoMeta
-          path="/colors"
-          title={`Bảng màu sơn 2026 | ${CONTACT_INFO.name}`}
-          description={`Gợi ý màu sơn nội thất, ngoại thất và tư vấn phối màu tại ${CONTACT_INFO.name}. ${CONTACT_INFO.address}. Liên hệ ${CONTACT_INFO.phone} để nhận bảng màu & báo giá.`}
-        />
-      </Helmet>
+      <SeoMeta
+        path="/colors"
+        title={`Bảng màu sơn 2026 | ${CONTACT_INFO.name}`}
+        description={`Gợi ý màu sơn nội thất, ngoại thất và tư vấn phối màu tại ${CONTACT_INFO.name}. ${CONTACT_INFO.address}. Liên hệ ${CONTACT_INFO.phone} để nhận bảng màu & báo giá.`}
+      />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header Section */}

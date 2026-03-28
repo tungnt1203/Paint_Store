@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { CONTACT_INFO } from '../constants';
 import {
   canonicalUrl,
@@ -27,7 +28,7 @@ export function SeoMeta({
 }: SeoMetaProps) {
   const url = canonicalUrl(path);
   return (
-    <>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       {noIndex ? (
@@ -48,6 +49,6 @@ export function SeoMeta({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-    </>
+    </Helmet>
   );
 }

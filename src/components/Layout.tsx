@@ -89,9 +89,9 @@ const NavigationBar = () => {
   const navLinks = [
     { name: 'Thương hiệu sơn', path: '/' },
     { name: 'Sản phẩm', path: '/catalog' },
-    { name: 'Bảng giá', path: '/' },
-    { name: 'Bảng màu', path: '/' },
-    { name: 'Vận chuyển', path: '/' },
+    { name: 'Bảng giá', path: '/#pricing' },
+    { name: 'Bảng màu', path: '/#color' },
+    { name: 'Vận chuyển', path: '/#shipping' },
     { name: 'Liên hệ', path: '/contact' },
   ];
 
@@ -101,7 +101,7 @@ const NavigationBar = () => {
         <div className="flex items-center space-x-6 lg:space-x-8 h-full overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {navLinks.map((link) => (
             <Link
-              key={link.path}
+              key={`${link.path}-${link.name}`}
               to={link.path}
               className={`h-full flex items-center px-4 font-headline font-bold text-sm uppercase tracking-wider transition-all relative group ${
                 location.pathname === link.path ? 'text-secondary' : 'text-white hover:text-secondary'
@@ -161,9 +161,9 @@ export const Navbar = () => {
   const mobileNavLinks = [
     { name: 'Thương hiệu sơn', path: '/' },
     { name: 'Sản phẩm', path: '/catalog' },
-    { name: 'Bảng giá', path: '/' },
-    { name: 'Bảng màu', path: '/' },
-    { name: 'Vận chuyển', path: '/' },
+    { name: 'Bảng giá', path: '/#pricing' },
+    { name: 'Bảng màu', path: '/#color' },
+    { name: 'Vận chuyển', path: '/#shipping' },
     { name: 'Liên hệ', path: '/contact' },
   ];
 

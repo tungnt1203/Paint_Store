@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Search, ChevronRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { SeoMeta } from '../components/SeoMeta';
 import { PRODUCTS, CONTACT_INFO } from '../constants';
 import { ProductCard } from '../components/Layout';
@@ -26,13 +25,11 @@ const Catalog = () => {
 
   return (
     <div className="pt-28 pb-20 max-w-7xl mx-auto px-6 md:px-8">
-      <Helmet>
-        <SeoMeta
-          path="/catalog"
-          title={`Danh mục sơn chính hãng | ${CONTACT_INFO.name}`}
-          description={`Sơn nội thất, ngoại thất, chống thấm, epoxy tại ${CONTACT_INFO.name} (${CONTACT_INFO.address}). Dulux, Jotun, Nippon, Kova, TOA, Spec — báo giá & tư vấn.`}
-        />
-      </Helmet>
+      <SeoMeta
+        path="/catalog"
+        title={`Danh mục sơn chính hãng | ${CONTACT_INFO.name}`}
+        description={`Sơn nội thất, ngoại thất, chống thấm, epoxy tại ${CONTACT_INFO.name} (${CONTACT_INFO.address}). Dulux, Jotun, Nippon, Kova, TOA, Spec — báo giá & tư vấn.`}
+      />
       {/* Editorial Header */}
       <header className="mb-20 text-center max-w-4xl mx-auto">
         <p className="text-secondary font-headline font-black uppercase tracking-[0.3em] text-sm mb-4">Danh mục sản phẩm</p>
