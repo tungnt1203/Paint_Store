@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ChevronRight, ShieldCheck, CheckCircle2, Info, ArrowLeft, Phone, ShoppingCart, Droplets, Sparkles, Shield, ArrowRightLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PRODUCTS } from '../constants';
+import { PRODUCTS, CONTACT_INFO } from '../constants';
 import { ProductCard } from '../components/Layout';
 
 const ProductDetail = () => {
@@ -27,9 +27,9 @@ const ProductDetail = () => {
   return (
     <div className="pt-28 pb-20 bg-surface-container-lowest">
       <Helmet>
-        <title>{`${product.name} - ${product.brand} | Duyên Paint`}</title>
+        <title>{`${product.name} - ${product.brand} | ${CONTACT_INFO.name}`}</title>
         <meta name="description" content={`${product.name} từ ${product.brand}. ${product.description.substring(0, 150)}...`} />
-        <meta property="og:title" content={`${product.name} - ${product.brand} | Duyên Paint`} />
+        <meta property="og:title" content={`${product.name} - ${product.brand} | ${CONTACT_INFO.name}`} />
         <meta property="og:description" content={product.description} />
         <meta property="og:image" content={product.image} />
         <link rel="canonical" href={`https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/product/${product.id}`} />
@@ -256,7 +256,7 @@ const ProductDetail = () => {
               <h2 className="text-3xl md:text-4xl font-headline font-black tracking-tight">So sánh: Dulux vs Jotun</h2>
             </div>
             <p className="text-white/70 max-w-2xl mb-12 text-lg">
-              Hai "ông lớn" trong ngành sơn có gì khác biệt? Hãy cùng Duyên Paint phân tích để bạn có lựa chọn phù hợp nhất cho ngôi nhà mình.
+              Hai "ông lớn" trong ngành sơn có gì khác biệt? Hãy cùng {CONTACT_INFO.name} phân tích để bạn có lựa chọn phù hợp nhất cho ngôi nhà mình.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

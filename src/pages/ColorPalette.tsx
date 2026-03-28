@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Palette, ChevronRight, Info, ShoppingCart, CheckCircle2, Sparkles, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { COLOR_PALETTE, PRODUCTS } from '../constants';
+import { COLOR_PALETTE, PRODUCTS, CONTACT_INFO } from '../constants';
 
 const ColorPalettePage = () => {
   const [activeColor, setActiveColor] = useState(COLOR_PALETTE[0]);
@@ -20,8 +20,8 @@ const ColorPalettePage = () => {
   return (
     <div className="pt-28 pb-20 bg-surface-container-lowest min-h-screen">
       <Helmet>
-        <title>Bảng màu sơn Dulux, Jotun 2026 | Duyên Paint - Phối màu chuyên nghiệp</title>
-        <meta name="description" content="Khám phá bảng màu sơn mới nhất 2026. Xem trước màu sơn trong không gian thực tế, nhận tư vấn phối màu từ chuyên gia Duyên Paint." />
+        <title>Bảng màu sơn chính hãng 2026 | {CONTACT_INFO.name} - Phối màu chuyên nghiệp</title>
+        <meta name="description" content={`Khám phá bảng màu sơn mới nhất 2026 tại ${CONTACT_INFO.name}. Xem trước màu sơn trong không gian thực tế, nhận tư vấn phối màu từ chuyên gia.`} />
         <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/colors" />
       </Helmet>
 
@@ -104,10 +104,10 @@ const ColorPalettePage = () => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 blur-3xl rounded-full"></div>
               <h4 className="text-xl font-headline font-black mb-4 relative z-10">Bạn phân vân giữa các màu?</h4>
               <p className="text-white/70 text-sm mb-6 relative z-10">
-                Chuyên gia của Duyên Paint sẽ giúp bạn phối màu 3D miễn phí cho công trình của mình.
+                Chuyên gia của {CONTACT_INFO.name} sẽ giúp bạn phối màu 3D miễn phí cho công trình của mình.
               </p>
               <a 
-                href="tel:0901234567" 
+                href={`tel:${CONTACT_INFO.phone.replace(/\./g, '')}`} 
                 className="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform relative z-10"
               >
                 Nhận tư vấn ngay <ChevronRight size={16} />

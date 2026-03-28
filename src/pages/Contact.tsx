@@ -1,14 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Helmet } from 'react-helmet-async';
+import { CONTACT_INFO } from '../constants';
 
 const Contact = () => {
   return (
     <div className="pt-28 pb-20 max-w-7xl mx-auto px-6 md:px-8">
       <Helmet>
-        <title>Liên Hệ Duyên Paint - Tư Vấn Báo Giá Sơn Dulux & Jotun</title>
-        <meta name="description" content="Liên hệ với Duyên Paint để nhận tư vấn phối màu và báo giá sơn Dulux, Jotun chính hãng. Địa chỉ showroom tại Quận 1, TP. Hồ Chí Minh." />
+        <title>Liên Hệ {CONTACT_INFO.name} - Tư Vấn Báo Giá Sơn Chính Hãng</title>
+        <meta name="description" content={`Liên hệ với ${CONTACT_INFO.name} để nhận tư vấn phối màu và báo giá sơn chính hãng. Địa chỉ showroom tại ${CONTACT_INFO.address}.`} />
         <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/contact" />
       </Helmet>
       <header className="mb-24 text-center max-w-4xl mx-auto">
@@ -28,7 +29,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-headline font-black text-primary text-xl mb-2">Điện thoại & Zalo</h4>
-                <p className="text-on-surface-variant font-bold text-lg">090 123 4567 (Ms. Duyên)</p>
+                <p className="text-on-surface-variant font-bold text-lg">{CONTACT_INFO.phone}</p>
                 <p className="text-on-surface-variant/70 font-medium">Hỗ trợ 24/7 cho mọi dự án</p>
               </div>
             </div>
@@ -38,7 +39,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-headline font-black text-primary text-xl mb-2">Yêu cầu qua Email</h4>
-                <p className="text-on-surface-variant font-bold text-lg">consult@duyenpaint.com</p>
+                <p className="text-on-surface-variant font-bold text-lg">{CONTACT_INFO.email}</p>
                 <p className="text-on-surface-variant/70 font-medium">Phản hồi trong vòng 2 giờ</p>
               </div>
             </div>
@@ -48,7 +49,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-headline font-black text-primary text-xl mb-2">Địa chỉ Showroom</h4>
-                <p className="text-on-surface-variant font-bold text-lg leading-relaxed">123 Đường Kiến Trúc, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
+                <p className="text-on-surface-variant font-bold text-lg leading-relaxed">{CONTACT_INFO.address}</p>
               </div>
             </div>
           </div>
@@ -58,27 +59,27 @@ const Contact = () => {
             <h4 className="font-headline font-black text-primary text-sm uppercase tracking-widest mb-8">Kết nối mạng xã hội</h4>
             <div className="flex space-x-6">
               <a 
-                href="https://zalo.me/0901234567" 
+                href={`https://zalo.me/${CONTACT_INFO.phone.replace(/\./g, '')}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-2xl bg-white border border-outline-variant/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm hover:shadow-xl p-3"
               >
                 <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" 
-                  alt="Liên hệ Duyên Paint qua Zalo" 
+                  alt={`Liên hệ ${CONTACT_INFO.name} qua Zalo`} 
                   className="w-full h-full"
                   referrerPolicy="no-referrer"
                 />
               </a>
               <a 
-                href="https://facebook.com/duyenpaint" 
+                href="https://facebook.com/sonnganpaint" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-2xl bg-white border border-outline-variant/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm hover:shadow-xl p-3"
               >
                 <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" 
-                  alt="Theo dõi Duyên Paint trên Facebook" 
+                  alt={`Theo dõi ${CONTACT_INFO.name} trên Facebook`} 
                   className="w-full h-full"
                   referrerPolicy="no-referrer"
                 />
@@ -106,7 +107,7 @@ const Contact = () => {
                   <label className="text-xs font-black text-primary uppercase tracking-widest">Số điện thoại</label>
                   <input 
                     type="tel" 
-                    placeholder="090 123 4567"
+                    placeholder={CONTACT_INFO.phone}
                     className="w-full bg-surface-container-low border-2 border-transparent rounded-2xl px-6 py-4 focus:border-primary focus:bg-white focus:outline-none transition-all font-bold"
                   />
                 </div>
@@ -147,8 +148,8 @@ const Contact = () => {
           </div>
         </div>
         <img 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAqQeVjc0ApNrOCx2I6PTV13LeCwix--WAtA-CN6ZI_Jzk2AEpoqnK-FaiXHjgrt21OQxYa7wtUtaQVd53d7OhslwWoL1QzZGLFHF0kxnkkYcIDu1jTb5oPwHN5xgu0CC8S5XcL4wvw_RGLz0yu5GwC43EZrOjIWYzULBB6-By2IVdQXiCFTExYble5WCUJlV-zQKP6gKmq89FgB10nIQenElp4djV9yg_8s0OlSTyU4pcK3LQHmkqBZN14uOoEh2pyjiEUedsCoE" 
-          alt="Bản đồ vị trí showroom Duyên Paint tại Quận 1, TP.HCM" 
+          src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&q=80&w=1200" 
+          alt={`Bản đồ vị trí showroom ${CONTACT_INFO.name}`} 
           className="w-full h-full object-cover opacity-50"
           referrerPolicy="no-referrer"
           loading="lazy"

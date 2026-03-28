@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search, ChevronRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { PRODUCTS } from '../constants';
+import { PRODUCTS, CONTACT_INFO } from '../constants';
 import { ProductCard } from '../components/Layout';
 
 const Catalog = () => {
@@ -26,8 +26,8 @@ const Catalog = () => {
   return (
     <div className="pt-28 pb-20 max-w-7xl mx-auto px-6 md:px-8">
       <Helmet>
-        <title>Danh Mục Sản Phẩm Sơn Dulux & Jotun - Duyên Paint</title>
-        <meta name="description" content="Khám phá danh mục sơn nội thất, ngoại thất và chống thấm cao cấp từ Dulux và Jotun. Lọc theo thương hiệu và loại sản phẩm để tìm màu sắc hoàn hảo cho ngôi nhà của bạn." />
+        <title>Danh Mục Sản Phẩm Sơn Chính Hãng - {CONTACT_INFO.name}</title>
+        <meta name="description" content={`Khám phá danh mục sơn nội thất, ngoại thất, chống thấm và sơn công nghiệp cao cấp tại ${CONTACT_INFO.name}. Phân phối chính hãng Dulux, Jotun, Nippon, Kova, TOA, Spec.`} />
         <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/catalog" />
       </Helmet>
       {/* Editorial Header */}

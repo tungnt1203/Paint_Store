@@ -1,11 +1,11 @@
-# Duyên Paint - Danh mục Sơn Kiến trúc Cao cấp
+# Sơn Ngân Paint - Tổng Đại Lý Phân Phối Sơn Chính Hãng
 
-Duyên Paint là một ứng dụng web chuyên nghiệp giới thiệu danh mục sơn kiến trúc cao cấp và cung cấp dịch vụ tư vấn chuyên sâu. Ứng dụng tập trung vào việc giới thiệu các dòng sản phẩm từ các thương hiệu hàng đầu thế giới như Dulux, Jotun, Nippon Paint và Kova.
+Sơn Ngân Paint là một ứng dụng web chuyên nghiệp giới thiệu danh mục sơn kiến trúc cao cấp và cung cấp dịch vụ tư vấn chuyên sâu. Ứng dụng tập trung vào việc giới thiệu các dòng sản phẩm từ các thương hiệu hàng đầu thế giới như Dulux, Jotun, Nippon Paint, Kova, TOA và Spec.
 
 ## 🚀 Tính năng chính
 
 - **Trang chủ chuyên nghiệp:** Giới thiệu các đối tác chiến lược với Logo thương hiệu sắc nét và hiệu ứng tương tác hiện đại.
-- **Danh mục sản phẩm:** Hệ thống danh mục sơn đa dạng, giúp người dùng dễ dàng tìm kiếm và lựa chọn.
+- **Danh mục sản phẩm:** Hệ thống danh mục sơn đa dạng (Sơn nước, Sơn dầu, Sơn Epoxy, Sơn sắt thép, Sơn chống thấm, Vật tư ngành sơn), giúp người dùng dễ dàng tìm kiếm và lựa chọn.
 - **Tư vấn màu sắc:** Công cụ hỗ trợ tư vấn màu sắc chuyên sâu cho các công trình kiến trúc.
 - **Thiết kế Responsive:** Giao diện tối ưu hóa cho mọi thiết bị từ điện thoại, máy tính bảng đến máy tính để bàn.
 - **Full-Stack Routing:** Sử dụng Express + Vite để hỗ trợ điều hướng SPA mượt mà, không bị lỗi 404 khi truy cập trực tiếp các đường dẫn.
@@ -50,4 +50,4 @@ Dự án đã bao gồm file `vercel.json` để cấu hình **Rewrites**, đả
 Sử dụng `server.ts` làm entry point để phục vụ các file tĩnh và xử lý routing thông qua Express.
 
 ---
-© 2026 Duyên Paint. All rights reserved. Thiết kế bởi tungnt.
+© 2026 Sơn Ngân Paint. All rights reserved. Thiết kế bởi tungnt.

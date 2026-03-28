@@ -5,7 +5,7 @@ export const PRODUCTS: Product[] = [
     id: '1',
     name: 'Dulux Ambiance 5in1 Diamond Glow',
     brand: 'Dulux Professional',
-    category: 'Sơn nội thất',
+    category: 'Sơn nước',
     price: 1450000,
     oldPrice: 1890000,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCEnPccMxG42XfFDh41ICp6sz-ufyewQmcRmh-IjOZvWRDydAnrA99-qxwQwVjutu0VDDLtZkygFltfQ0eTHTnv9s_RlnNRDi1SvRn7RWeU6msLLEWkTxajhHPN0TechSbB147Y4HqbwHtTOYDbcR_jfQ7BcVsQ5YqM81LKQ2ptcRFqS-nSnWHefkBKHDqKJrn2VZtVoarcCcSvgnnfJG7mOIddbOfhK82Db-Jk7qK2MpsSpOVDxF4EkUdjBFuJNZr6OGc_UCI3rS0',
@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
     id: '2',
     name: 'Jotun Majestic Đẹp Hoàn Hảo (Bóng)',
     brand: 'Jotun Majestic',
-    category: 'Sơn nội thất',
+    category: 'Sơn nước',
     price: 1280000,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbx-507v-1SjIDFmB3Rj4V4bTYXGgidEEy14LOM_5eiPf8yHIDfd1OmSIoJkAHa6WQElQlFEVgRofHQCGZd81ktsPAnsrztkZ06jni8NqzlE-XRtkJjg-xHJJl8ai3zRaT8jG0viXOKF2E9UmTbQr_RXgnl0VbfzJ05TxqI3lz-kq7MP8E08XTjmcWOW8tMZgP62cKRYIKzUyAqLyvb-s5SNkUbrh5CmI3-XoRJ0ssl3mPGCaa5eF24r38Emc6CCBaqIdnrxEy0uE',
     description: 'Sơn nội thất cao cấp mang lại màu sắc rực rỡ, sắc nét và bề mặt bóng mịn sang trọng.',
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
     id: '3',
     name: 'Dulux Weathershield Powerflexx',
     brand: 'Dulux Professional',
-    category: 'Sơn ngoại thất',
+    category: 'Sơn nước',
     price: 2150000,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAbsZmOseFDMbGxU0B_0uKxm9MCRui7mxpd4oatBseCZgdSC3scOyEEGdvjkCrX8f7b86B8OZLklPKXBtuTfrz1TLYHkp3JO32MGjcQmz3yVeTdGUOfEYkowkATfe5pTxPQE0Ztmq-9UDZhB88YrFZoxIpo3xKt9cFkZlj_ZGydRG6LvUetzhnHZGUDlceYPAQL_6nLnTx-FRLQbTYQ79H3Jgg_Wxc6a5vR_YV_yKbU09q8mEKqK65V9OmoDBy0pVwoXOKWf5l6NuM',
     description: 'Sơn ngoại thất siêu cao cấp với công nghệ Powerflexx giúp màng sơn co giãn gấp 3 lần, bảo vệ tường nhà khỏi các vết nứt.',
@@ -113,65 +113,86 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '4',
-    name: 'Nippon Odour-less Chùi Rửa Vượt Trội',
-    brand: 'Nippon Paint',
-    category: 'Sơn nội thất',
-    price: 950000,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBr05sTq7Q7RySRZioRlSytHRUD-uFYlm4gLYsGBfMlmvv9J83Zc8hzbEXuCzanYxO8jWLOlN9gPMf5qPqGVrVCuetFxcINKmfjnQEheN2ihkWgEeABDr_kOnU0Pbed1ZuFyHBqrA7WUxfiJ2GbkMbAnfBVRYWV8QXZ30sAvMVQmhT-MHA24NWppw68NVk8ptkAFT6-5mcHl7XgkD3ju91PaMRU1Ol7wMPN5L7t5dKHB3WZI6JlGEtC4bGpf8RrdsMu-Xpvj4iCPY0',
-    description: 'Sơn nội thất thân thiện với môi trường, hàm lượng V.O.C thấp, không mùi và dễ dàng lau chùi.',
+    name: 'Sơn dầu Jotun Essence',
+    brand: 'Jotun Majestic',
+    category: 'Sơn dầu',
+    price: 850000,
+    image: 'https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=800',
+    description: 'Sơn dầu cao cấp bảo vệ bề mặt gỗ và kim loại, nhanh khô và bền màu.',
     specs: {
-      'Thương hiệu': 'Nippon Nhật Bản',
-      'Độ phủ': '10-12 m²/lít/lớp',
-      'Thời gian khô': '30 phút',
+      'Thương hiệu': 'Jotun Na Uy',
+      'Độ phủ': '12-14 m²/lít/lớp',
+      'Thời gian khô': '4-6 giờ',
       'Số lớp sơn': '2 lớp'
     },
     features: [
-      'Gần như không mùi',
-      'Chùi rửa vượt trội',
-      'Thân thiện môi trường',
-      'Hàm lượng V.O.C cực thấp'
+      'Nhanh khô',
+      'Bền màu',
+      'Chống rỉ sét',
+      'Dễ thi công'
     ]
   },
   {
     id: '5',
-    name: 'Jotun Jotashield Bền Màu Toàn Diện',
-    brand: 'Jotun Majestic',
-    category: 'Sơn ngoại thất',
-    price: 1890000,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBSQrkN8usdj4H0XR4rwFYKKrM-MxQ-o8f_FM971lJWuc-cqOQ_EYdL2Q11pDlq2ZM5FE6JbwSoJjk7QiqwdBmZXMeb6WKdB1XntAxFlWt-CP5RM7b5ssrNouOJX20QkJtAtVf9Btv1sLa9Iq1Y3strwlcpGi4r4tb16Y-HezQyt8yqCsYOEi1GuPcKWLDoYNDsKtphF00hfhOv5TirJgwqoZq9fNVgprO5Qc2TC8SvtIS5dqxenbRqDJcoFBI3F074dfCZyfzzHEE',
-    description: 'Sơn ngoại thất cao cấp nhất của Jotun, bảo vệ ngôi nhà bền bỉ trước mọi điều kiện thời tiết khắc nghiệt.',
+    name: 'Sơn Epoxy Kova KL-5',
+    brand: 'Kova',
+    category: 'Sơn Epoxy',
+    price: 3250000,
+    image: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=800',
+    description: 'Sơn Epoxy hệ nước cho sàn công nghiệp, chịu mài mòn và va đập cao.',
     specs: {
-      'Thương hiệu': 'Jotun Na Uy',
-      'Độ phủ': '9-12 m²/lít/lớp',
-      'Thời gian khô': '2 giờ',
-      'Số lớp sơn': '2 lớp'
+      'Thương hiệu': 'Kova Việt Nam',
+      'Độ phủ': '4-5 m²/kg/2 lớp',
+      'Thời gian khô': '24 giờ',
+      'Số lớp sơn': '2-3 lớp'
     },
     features: [
-      'Kháng tia cực tím tối đa',
-      'Chống bám bụi',
-      'Chống rong rêu & nấm mốc',
-      'Bảo vệ 12 năm'
+      'Chịu mài mòn cao',
+      'Kháng hóa chất',
+      'Chống trơn trượt',
+      'Thân thiện môi trường'
     ]
   },
   {
     id: '6',
-    name: 'Dulux EasyClean Chống Bám Bẩn',
-    brand: 'Dulux Professional',
-    category: 'Sơn nội thất',
-    price: 1120000,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLC3P598qUPtYecKv8mMyfZqwaKXH9_AlFlk_yD1n8nuCGusLC0_Mo-SHvcVKZEI99CIfCGYEmdjVLL_h_iz5QQJqHpjWWjYa-KYRsV92M2TKajghQFfdtBoCofIWHhyI3FfmSPCExBFmLcLKJ4zIfeluH3SuxbGZYhlyC2vDHAaRAMku2fLbl_Iso4eYq7NWw2tlUtc1A0_LgfLm_HKt-y5J4ot1ujeZwOM4iwsV_sXE-eiRcc-hT2L4-H4E5YVip_d_BAzWADn4',
-    description: 'Sơn nội thất cao cấp với công nghệ chống bám bẩn chủ động, giúp ngăn chặn các vết bẩn thấm sâu vào màng sơn.',
+    name: 'Chống thấm Kova CT-11A Plus',
+    brand: 'Kova',
+    category: 'Sơn chống thấm',
+    price: 1850000,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDNhaDPjgHOn22QEcbfT8sn0SlU7UFw_xHYeZnCZ7bTDQ0t1u80ppCFREZ9MOZ6VQU6wupAelmLvn8Z54r8s-XIh06B3R9SjR9oqt_Gr_OYRe-ep3SLiZv1tGmYvoygXCkxW27lCjCMcUFTCulukwxsCr3kQ0b5VLkfA4CpxOALIA62Mc0RfeOLkDpnc_vVzpQBo34TlMaAdGddBsqLaRSfiInMOpO8GYCOFjx_Fekig5ZX7v2WKdFPnTrhnUKGH6aG_R0SxK16i0',
+    description: 'Chống thấm cao cấp cho tường đứng, ngăn chặn nước thấm hiệu quả.',
     specs: {
-      'Thương hiệu': 'Dulux (AkzoNobel)',
-      'Độ phủ': '12-14 m²/lít/lớp',
-      'Thời gian khô': '1-2 giờ',
+      'Thương hiệu': 'Kova Việt Nam',
+      'Độ phủ': '2-2.5 m²/kg/2 lớp',
+      'Thời gian khô': '2 giờ',
       'Số lớp sơn': '2 lớp'
     },
     features: [
-      'Công nghệ chống bám bẩn',
-      'Dễ lau chùi',
-      'Kháng khuẩn',
-      'Màu sắc bền đẹp'
+      'Chống thấm tuyệt đối',
+      'Bám dính cực tốt',
+      'Bền bỉ với thời gian',
+      'An toàn cho người dùng'
+    ]
+  },
+  {
+    id: '7',
+    name: 'Dulux Aquatech Chống Thấm Hiệu Quả',
+    brand: 'Dulux Professional',
+    category: 'Sơn chống thấm',
+    price: 1650000,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDNhaDPjgHOn22QEcbfT8sn0SlU7UFw_xHYeZnCZ7bTDQ0t1u80ppCFREZ9MOZ6VQU6wupAelmLvn8Z54r8s-XIh06B3R9SjR9oqt_Gr_OYRe-ep3SLiZv1tGmYvoygXCkxW27lCjCMcUFTCulukwxsCr3kQ0b5VLkfA4CpxOALIA62Mc0RfeOLkDpnc_vVzpQBo34TlMaAdGddBsqLaRSfiInMOpO8GYCOFjx_Fekig5ZX7v2WKdFPnTrhnUKGH6aG_R0SxK16i0',
+    description: 'Công nghệ Hydroshield giúp bề mặt đanh chắc, chống thấm tối ưu.',
+    specs: {
+      'Thương hiệu': 'Dulux (AkzoNobel)',
+      'Độ phủ': '4-5 m²/kg/2 lớp',
+      'Thời gian khô': '2 giờ',
+      'Số lớp sơn': '2 lớp'
+    },
+    features: [
+      'Chống thấm vượt trội',
+      'Bề mặt đanh chắc',
+      'Chống rêu mốc',
+      'Dễ thi công'
     ]
   }
 ];
@@ -200,6 +221,78 @@ export const BRANDS = [
     name: 'Kova',
     logo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDNhaDPjgHOn22QEcbfT8sn0SlU7UFw_xHYeZnCZ7bTDQ0t1u80ppCFREZ9MOZ6VQU6wupAelmLvn8Z54r8s-XIh06B3R9SjR9oqt_Gr_OYRe-ep3SLiZv1tGmYvoygXCkxW27lCjCMcUFTCulukwxsCr3kQ0b5VLkfA4CpxOALIA62Mc0RfeOLkDpnc_vVzpQBo34TlMaAdGddBsqLaRSfiInMOpO8GYCOFjx_Fekig5ZX7v2WKdFPnTrhnUKGH6aG_R0SxK16i0',
     description: 'Thương hiệu sơn Việt vươn tầm thế giới.'
+  },
+  {
+    id: 'toa',
+    name: 'TOA Paint',
+    logo: 'https://toagroup.com.vn/vnt_upload/weblink/TOA_Logo_Standard_1.png',
+    description: 'Sơn công nghệ Thái Lan, bảo vệ tối ưu.'
+  },
+  {
+    id: 'spec',
+    name: 'Spec',
+    logo: 'https://spec.com.vn/wp-content/uploads/2018/04/logo-spec.png',
+    description: 'Đỉnh cao về trang trí và bảo vệ.'
+  }
+];
+
+export const CONTACT_INFO = {
+  name: 'Sơn Ngân',
+  fullName: 'Sơn Ngân Paint',
+  headerTitle: 'Tổng đại lý sơn chính hãng',
+  address: '302A Nguyễn Văn Cừ - P. Tân Lập - T. Đắk Lắk',
+  phone: '0366.625.695',
+  phone2: '0377.328.602',
+  email: 'contact@sonnganpaint.vn',
+  workingHours: '7:30 - 18:00 (T2 - CN)',
+  slogan: 'chất lượng - uy tín - tận tâm',
+  bannerSlogan: 'GIAO HÀNG TOÀN QUỐC',
+  services: [
+    'Sơn nước',
+    'Sơn dầu',
+    'Sơn Epoxy',
+    'Sơn sắt thép',
+    'Sơn chống thấm',
+    'Vật tư ngành sơn'
+  ]
+};
+
+export const CATEGORIES: Category[] = [
+  {
+    id: 'water-paint',
+    name: 'Sơn nước',
+    description: 'Sơn nội thất và ngoại thất cao cấp cho mọi công trình.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDu9fY2EdRzb_a5_OLh31UzqhxQo3-FOoybjQhiJQHsEIwKat-d6w0LO8z-EMfdJTDlIb2joXYQz149-M4akJUqWcm0EV4NZt1SAiNAhWiVn8Wed3SZZm17_zWtiZZhsRD2pbbc_Pt8pi9jE95txQY7ZpdtTHriZJGTbOgODZ1K7yjv-3hFBjK0lvS2iBN7fxhP_E1jSMqhjY3W6nDun5Sx67jhTAv-ySA71mH3qnTDJ0npQI9Ikxp7eKPmSj1-Rico5VUMpSnpYx0'
+  },
+  {
+    id: 'oil-paint',
+    name: 'Sơn dầu',
+    description: 'Bảo vệ bề mặt gỗ và kim loại bền bỉ.',
+    image: 'https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'epoxy-paint',
+    name: 'Sơn Epoxy',
+    description: 'Giải pháp sàn công nghiệp chịu lực và thẩm mỹ.',
+    image: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'steel-paint',
+    name: 'Sơn sắt thép',
+    description: 'Chống rỉ sét và bảo vệ kết cấu thép.',
+    image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'waterproofing',
+    name: 'Sơn chống thấm',
+    description: 'Ngăn chặn ẩm mốc, bảo vệ tường và sàn tuyệt đối.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDNhaDPjgHOn22QEcbfT8sn0SlU7UFw_xHYeZnCZ7bTDQ0t1u80ppCFREZ9MOZ6VQU6wupAelmLvn8Z54r8s-XIh06B3R9SjR9oqt_Gr_OYRe-ep3SLiZv1tGmYvoygXCkxW27lCjCMcUFTCulukwxsCr3kQ0b5VLkfA4CpxOALIA62Mc0RfeOLkDpnc_vVzpQBo34TlMaAdGddBsqLaRSfiInMOpO8GYCOFjx_Fekig5ZX7v2WKdFPnTrhnUKGH6aG_R0SxK16i0'
+  },
+  {
+    id: 'materials',
+    name: 'Vật tư ngành sơn',
+    description: 'Cọ, rulo, súng phun và các dụng cụ thi công chuyên nghiệp.',
+    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800'
   }
 ];
 
@@ -230,33 +323,6 @@ export const COLOR_PALETTE = [
     description: 'Sự lựa chọn hoàn hảo cho phong cách tối giản và tinh tế.',
     preview: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800',
     relatedProducts: ['1', '5']
-  },
-  {
-    id: 'blue',
-    name: 'Xanh bình yên',
-    hex: '#1E3A8A',
-    code: 'BL 302',
-    description: 'Gợi nhớ về bầu trời và đại dương, mang lại sự thư thái.',
-    preview: 'https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&q=80&w=800',
-    relatedProducts: ['3', '5']
-  },
-  {
-    id: 'yellow',
-    name: 'Vàng năng lượng',
-    hex: '#FFD700',
-    code: 'YL 401',
-    description: 'Kích thích sự sáng tạo và mang lại niềm vui cho căn phòng.',
-    preview: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=800',
-    relatedProducts: ['2', '4']
-  },
-  {
-    id: 'pastel',
-    name: 'Hồng Pastel',
-    hex: '#FFD1DC',
-    code: 'PS 505',
-    description: 'Nhẹ nhàng, lãng mạn và cực kỳ phù hợp cho phòng ngủ.',
-    preview: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800',
-    relatedProducts: ['4', '6']
   }
 ];
 
@@ -268,22 +334,6 @@ export const PROJECTS = [
     before: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=800',
     after: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
     description: 'Sử dụng sơn Dulux Weathershield bảo vệ ngoại thất bền bỉ.'
-  },
-  {
-    id: '2',
-    title: 'Căn hộ Penthouse District 1',
-    type: 'Căn hộ',
-    before: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=800',
-    after: 'https://images.unsplash.com/photo-1600607687960-4a2283a71056?auto=format&fit=crop&q=80&w=800',
-    description: 'Phối màu Jotun Majestic mang lại vẻ đẹp sang trọng.'
-  },
-  {
-    id: '3',
-    title: 'Chuỗi Cafe The Coffee House',
-    type: 'Công trình thương mại',
-    before: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800',
-    after: 'https://images.unsplash.com/photo-1559925393-8be0ec41b5ec?auto=format&fit=crop&q=80&w=800',
-    description: 'Sơn Nippon Odour-less đảm bảo không mùi, an toàn cho khách hàng.'
   }
 ];
 
@@ -294,20 +344,6 @@ export const BLOG_POSTS = [
     excerpt: 'Khám phá những gam màu sẽ lên ngôi trong năm 2026, từ tông đất ấm áp đến xanh mint thanh khiết.',
     image: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=800',
     date: '20/03/2026'
-  },
-  {
-    id: '2',
-    title: 'Top 5 màu sơn phòng ngủ giúp bạn ngủ ngon và sâu hơn',
-    excerpt: 'Màu sắc ảnh hưởng trực tiếp đến tâm trạng. Hãy chọn đúng màu để có giấc ngủ trọn vẹn.',
-    image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800',
-    date: '15/03/2026'
-  },
-  {
-    id: '3',
-    title: 'Bí quyết chọn sơn ngoại thất chống thấm tuyệt đối cho mùa mưa',
-    excerpt: 'Hướng dẫn chi tiết cách chọn và thi công sơn chống thấm để bảo vệ ngôi nhà của bạn.',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800',
-    date: '10/03/2026'
   }
 ];
 
@@ -319,7 +355,7 @@ export const SERVICES = [
   },
   {
     title: 'Giao hàng tận nơi',
-    description: 'Giao hàng nhanh chóng trong ngày tại TP.HCM.',
+    description: 'Giao hàng nhanh chóng toàn quốc.',
     icon: 'Truck'
   },
   {
@@ -331,26 +367,5 @@ export const SERVICES = [
     title: 'Hỗ trợ thi công',
     description: 'Kết nối đội ngũ thợ sơn tay nghề cao, uy tín.',
     icon: 'Wrench'
-  }
-];
-
-export const CATEGORIES: Category[] = [
-  {
-    id: 'interior',
-    name: 'Sơn nội thất',
-    description: 'Tạo ra không gian sống tuyệt vời với các dòng sơn nội thất cao cấp.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDu9fY2EdRzb_a5_OLh31UzqhxQo3-FOoybjQhiJQHsEIwKat-d6w0LO8z-EMfdJTDlIb2joXYQz149-M4akJUqWcm0EV4NZt1SAiNAhWiVn8Wed3SZZm17_zWtiZZhsRD2pbbc_Pt8pi9jE95txQY7ZpdtTHriZJGTbOgODZ1K7yjv-3hFBjK0lvS2iBN7fxhP_E1jSMqhjY3W6nDun5Sx67jhTAv-ySA71mH3qnTDJ0npQI9Ikxp7eKPmSj1-Rico5VUMpSnpYx0'
-  },
-  {
-    id: 'exterior',
-    name: 'Sơn ngoại thất',
-    description: 'Bảo vệ ngôi nhà của bạn trước mọi điều kiện thời tiết khắc nghiệt.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDlA3c8Ck9gqh5767NNXPQvrNj3AtHW9OoPlGMnl6aXjsEhdwQhMxcUM4ppqUCsassNTdJi1tFj7Om8fbQSP8YEtif9V2pfWEEYMvTUkre5lGHVojdDoIIDmUPNlR0CFgrpXac80gg5ILP0Etk3W5LaUHQeUQsWbp_UU2f6sLtdsRJ63U8OLx1UJ1hW3DrXyLrUd1jwLx3RSZUdEBaZq79ZiHigdj-aGt9jAmeDIZtsqdM_kZz47viSszMuXA3KhNHXUlhWqkdW0hQ'
-  },
-  {
-    id: 'waterproofing',
-    name: 'Sơn chống thấm',
-    description: 'Độ bền cực cao cho khí hậu nhiệt đới.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDNhaDPjgHOn22QEcbfT8sn0SlU7UFw_xHYeZnCZ7bTDQ0t1u80ppCFREZ9MOZ6VQU6wupAelmLvn8Z54r8s-XIh06B3R9SjR9oqt_Gr_OYRe-ep3SLiZv1tGmYvoygXCkxW27lCjCMcUFTCulukwxsCr3kQ0b5VLkfA4CpxOALIA62Mc0RfeOLkDpnc_vVzpQBo34TlMaAdGddBsqLaRSfiInMOpO8GYCOFjx_Fekig5ZX7v2WKdFPnTrhnUKGH6aG_R0SxK16i0'
   }
 ];

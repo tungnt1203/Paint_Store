@@ -1,14 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ShieldCheck, Ruler, Package, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Helmet } from 'react-helmet-async';
+import { BRANDS, CONTACT_INFO } from '../constants';
 
 const About = () => {
   return (
     <div className="pt-24">
       <Helmet>
-        <title>Về Duyên Paint - Đối Tác Ủy Quyền Sơn Dulux & Jotun</title>
-        <meta name="description" content="Tìm hiểu về Duyên Paint, đại lý ủy quyền sơn Dulux và Jotun từ năm 2019. Chúng tôi cam kết cung cấp sơn chính hãng và dịch vụ tư vấn kỹ thuật chuyên nghiệp." />
+        <title>Về {CONTACT_INFO.name} - Tổng Đại Lý Phân Phối Sơn Chính Hãng</title>
+        <meta name="description" content={`Tìm hiểu về ${CONTACT_INFO.name}, đại lý ủy quyền các thương hiệu sơn hàng đầu thế giới. Chúng tôi cam kết cung cấp sơn chính hãng và dịch vụ tư vấn kỹ thuật chuyên nghiệp.`} />
         <link rel="canonical" href="https://ais-pre-ighnbujlpckyiteo6aejeg-622160810419.asia-east1.run.app/about" />
       </Helmet>
       {/* Hero Section */}
@@ -17,7 +18,7 @@ const About = () => {
           <div className="lg:col-span-7">
             <span className="text-secondary font-headline font-black uppercase tracking-[0.3em] text-sm block mb-6">Thành lập năm 2019</span>
             <h1 className="text-6xl md:text-8xl font-headline font-black text-primary leading-[0.9] tracking-tighter mb-10">
-              Duyên Paint <br/>Hoàn thiện <span className="italic text-on-surface-variant">Kiến trúc.</span>
+              {CONTACT_INFO.name} <br/>Hoàn thiện <span className="italic text-on-surface-variant">Kiến trúc.</span>
             </h1>
             <p className="text-xl text-on-surface-variant leading-relaxed max-w-2xl font-medium">
               Trong nửa thập kỷ qua, chúng tôi là đối tác thầm lặng đằng sau những công trình kiến trúc danh giá nhất. Chúng tôi không chỉ bán sơn; chúng tôi tuyển chọn phương tiện cho tầm nhìn nghệ thuật của bạn.
@@ -26,8 +27,8 @@ const About = () => {
           <div className="lg:col-span-5 relative">
             <div className="aspect-[4/5] bg-surface-container-highest rounded-[2.5rem] overflow-hidden relative shadow-2xl">
               <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAqQeVjc0ApNrOCx2I6PTV13LeCwix--WAtA-CN6ZI_Jzk2AEpoqnK-FaiXHjgrt21OQxYa7wtUtaQVd53d7OhslwWoL1QzZGLFHF0kxnkkYcIDu1jTb5oPwHN5xgu0CC8S5XcL4wvw_RGLz0yu5GwC43EZrOjIWYzULBB6-By2IVdQXiCFTExYble5WCUJlV-zQKP6gKmq89FgB10nIQenElp4djV9yg_8s0OlSTyU4pcK3LQHmkqBZN14uOoEh2pyjiEUedsCoE" 
-                alt="Showroom Duyên Paint trưng bày các dòng sơn Dulux và Jotun chính hãng" 
+                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=1200" 
+                alt={`Showroom ${CONTACT_INFO.name} trưng bày các dòng sơn chính hãng`} 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                 referrerPolicy="no-referrer"
               />
@@ -51,7 +52,7 @@ const About = () => {
               </div>
               <h2 className="text-3xl font-headline font-black leading-tight">Tính xác thực không thỏa hiệp</h2>
               <p className="text-white/70 leading-relaxed text-lg">
-                Là đối tác ủy quyền của Dulux và Jotun, mỗi giọt sơn trong kho của chúng tôi đều được chứng nhận chính hãng. Chúng tôi duy trì tiêu chuẩn lưu trữ nghiêm ngặt để đảm bảo chất lượng tuyệt đối.
+                Là đối tác ủy quyền của các thương hiệu sơn hàng đầu, mỗi giọt sơn trong kho của chúng tôi đều được chứng nhận chính hãng. Chúng tôi duy trì tiêu chuẩn lưu trữ nghiêm ngặt để đảm bảo chất lượng tuyệt đối.
               </p>
             </div>
             <div className="space-y-8">
@@ -87,43 +88,18 @@ const About = () => {
             <p className="text-on-surface-variant text-lg font-medium">Chúng tôi hợp tác độc quyền với các nhà lãnh đạo thế giới để đảm bảo khách hàng nhận được kết quả bền bỉ và rực rỡ nhất.</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="bg-surface p-16 rounded-[3rem] flex items-center justify-between group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
-            <div>
-              <h3 className="text-5xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Dulux</h3>
-              <p className="mt-4 text-on-surface-variant font-bold text-lg">Giải pháp trang trí cao cấp</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {BRANDS.map((brand) => (
+            <div key={brand.id} className="bg-surface p-12 rounded-[3rem] flex items-center justify-between group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
+              <div>
+                <h3 className="text-4xl font-headline font-black text-primary group-hover:text-secondary transition-colors">{brand.name}</h3>
+                <p className="mt-4 text-on-surface-variant font-bold text-base">{brand.description}</p>
+              </div>
+              <div className="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                <ArrowRight size={24} />
+              </div>
             </div>
-            <div className="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-              <ArrowRight size={32} />
-            </div>
-          </div>
-          <div className="bg-surface p-16 rounded-[3rem] flex items-center justify-between group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
-            <div>
-              <h3 className="text-5xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Jotun</h3>
-              <p className="mt-4 text-on-surface-variant font-bold text-lg">Sự xuất sắc trong công nghiệp</p>
-            </div>
-            <div className="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-              <ArrowRight size={32} />
-            </div>
-          </div>
-          <div className="bg-surface p-16 rounded-[3rem] flex items-center justify-between group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
-            <div>
-              <h3 className="text-5xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Nippon</h3>
-              <p className="mt-4 text-on-surface-variant font-bold text-lg">Công nghệ Nhật Bản</p>
-            </div>
-            <div className="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-              <ArrowRight size={32} />
-            </div>
-          </div>
-          <div className="bg-surface p-16 rounded-[3rem] flex items-center justify-between group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
-            <div>
-              <h3 className="text-5xl font-headline font-black text-primary group-hover:text-secondary transition-colors">Kova</h3>
-              <p className="mt-4 text-on-surface-variant font-bold text-lg">Sơn Việt vươn tầm thế giới</p>
-            </div>
-            <div className="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-              <ArrowRight size={32} />
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -133,8 +109,8 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[700px]">
             <div className="md:col-span-2 md:row-span-2 bg-white rounded-[3rem] overflow-hidden relative shadow-lg group">
               <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV_oeA61qJyBKIqDSgz7X7i_lClBCFxU59UxQ_DtamBFNUKoCxOnWRLuZ2PnMtKiV_bYsh6N8V-kVeDbtsXknGYJdxuYG0cAJw5aEDuRLQB6RX7Zl0Wdx2YRzBszzGDMbkPrabiQirJtbOeQ2I92dCmlktY6OYw47BWeQINpeL-4kEaby5sl9fE79JoFmOfa1Uogc9NR7fsj1C26Fzfjk5tJGNAbIkDcBqF0gbZF2-zD0bwRBIAIHMBlt9TwgA6J3HEnNQwFHZXfY" 
-                alt="Kho hàng Duyên Paint với đầy đủ các dòng sơn Dulux và Jotun" 
+                src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&q=80&w=1200" 
+                alt={`Kho hàng ${CONTACT_INFO.name} với đầy đủ các dòng sơn chính hãng`} 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
                 loading="lazy"
@@ -145,8 +121,8 @@ const About = () => {
             </div>
             <div className="md:col-span-2 bg-white rounded-[2.5rem] overflow-hidden shadow-lg group">
               <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeSltTSAPA4ZL0Hjqsb5uDGcE8fY-8e4Js-kMs5pLNyk5s03tVyfy047PefEM1NizghRzgQZU6lQ20Eyzvmrsd5Dg0diobJ-eOMO5er78OUvSoY3kefx4jdEIXVsQTc-nWJl-nhfSY_nvHcCwPcNskVRyfARedi1X62ZVIWRxo_nA4Btd55MaVig-0EhuqeneBH90CtptpaK4mO_-VlvxxQcMWDWEzlRAxN9azSOkC9Dd1FU14KcrXN0ufI8hrmMgZUyQGvBLoP-Y" 
-                alt="Quy trình pha màu sơn chuyên nghiệp tại Duyên Paint" 
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200" 
+                alt={`Quy trình pha màu sơn chuyên nghiệp tại ${CONTACT_INFO.name}`} 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
                 loading="lazy"
@@ -154,7 +130,7 @@ const About = () => {
             </div>
             <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-lg group">
               <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYWO5fYJAl8dySrGCgzJ31BlI12dY9RYo2mawNYVUjyqCoLYDWwM_FK-tP7YnV95qk010Nmk9jRYp7EeTS_rQG3EM6oTZtD-khG1usjx1JCkom-I_X5KA3JfWbb-aSyWoNaQeIPkSVIUwyNfYdxuMloE2wHXo7viV41mWYrDp-9m_EJomtk2yXNmrWIUqUvYG9myy2_TMV7o6j4FzSRKXY50wp6yo9313aDDHVBBNwcsted-KrhbQogkPkjul2J5P5-XFJB9-3B6Q" 
+                src="https://images.unsplash.com/photo-1595844730298-b960ff98fee0?auto=format&fit=crop&q=80&w=1200" 
                 alt="Bề mặt sơn hoàn thiện chất lượng cao" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
