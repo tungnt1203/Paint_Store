@@ -4,13 +4,12 @@ import { Search, Menu, X, Phone, ArrowRight, Share2, Award, Star, ShoppingCart, 
 import { motion, AnimatePresence } from 'motion/react';
 
 import { PRODUCTS, CONTACT_INFO } from '../constants';
-import logoImg from '../images/logo_sn_transparent.png';
 
 const Logo = ({ className = "w-24 h-24", showText = false }: { className?: string, showText?: boolean }) => (
   <div className="flex items-center gap-3 group">
     <div className={`relative ${className} flex items-center justify-center flex-shrink-0`}>
       <img 
-        src={logoImg} 
+        src="/logo_sn_transparent.png" 
         alt={`Logo ${CONTACT_INFO.name}`} 
         className="w-full h-full object-contain"
         referrerPolicy="no-referrer"
