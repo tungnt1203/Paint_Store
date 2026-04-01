@@ -285,7 +285,7 @@ const SHOWROOM_MAP_SEARCH_QUERY =
 export const CONTACT_INFO = {
   name: 'Sơn Ngân',
   fullName: 'Công ty TNHH TM & DV Sơn Ngân',
-  headerTitle: 'Tổng đại lý sơn chính hãng',
+  headerTitle: 'Nhà phân phối sơn chính hãng',
   address: '302A Nguyễn Văn Cừ - P. Tân Lập - T. Đắk Lắk',
   /** Tọa độ khu vực Nguyễn Văn Cừ — Tân Lập (đồng bộ với địa chỉ showroom) */
   map: {

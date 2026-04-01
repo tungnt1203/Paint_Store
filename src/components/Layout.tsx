@@ -288,7 +288,7 @@ export const Footer = () => {
             <Logo className="w-14 h-14" showText={true} />
           </Link>
           <p className="text-white/70 font-body leading-relaxed">
-            Tổng đại lý sơn chính hãng. Chuyên cung cấp sơn nước, sơn dầu, sơn epoxy, sơn sắt thép, sơn chống thấm và vật tư ngành sơn. {CONTACT_INFO.slogan}.
+            Nhà phân phối sơn chính hãng. Chuyên cung cấp sơn nước, sơn dầu, sơn epoxy, sơn sắt thép, sơn chống thấm và vật tư ngành sơn. {CONTACT_INFO.slogan}.
           </p>
           <div className="flex space-x-4 items-center">
             <a href="https://facebook.com/sonnganpaint" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-all">
