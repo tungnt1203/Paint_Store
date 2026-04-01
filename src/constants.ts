@@ -297,7 +297,7 @@ export const CONTACT_INFO = {
   },
   phone: '0366.625.695',
   phone2: '0377.328.602',
-  email: 'contact@sonnganpaint.vn',
+  email: 'sonnganbmt@gmail.com',
   workingHours: '7:30 - 18:00 (T2 - CN)',
   slogan: 'chất lượng - uy tín - tận tâm',
   bannerSlogan: 'GIAO HÀNG TOÀN QUỐC',

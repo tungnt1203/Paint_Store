@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Menu, X, Phone, ArrowRight, Share2, Award, Star, ShoppingCart, MapPin, Mail, Palette, Truck, Wrench } from 'lucide-react';
+import { Search, Menu, X, Phone, Share2, Award, MapPin, Mail, Palette, Truck, Wrench } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import logoImg from '../images/logo_sn_transparent.png';
+import logoImg from '../images/logo_sn_transparent_opt.png';
 
-import { PRODUCTS, CONTACT_INFO } from '../constants';
+import { CONTACT_INFO } from '../constants';
 
 const Logo = ({ className = "w-24 h-24", showText = false }: { className?: string, showText?: boolean }) => (
   <div className="flex items-center gap-3 group">
@@ -13,6 +13,9 @@ const Logo = ({ className = "w-24 h-24", showText = false }: { className?: strin
         src={logoImg} 
         alt={`Logo ${CONTACT_INFO.name}`} 
         className="w-full h-full object-contain"
+        width={296}
+        height={384}
+        decoding="async"
         referrerPolicy="no-referrer"
       />
     </div>

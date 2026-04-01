@@ -7,7 +7,6 @@ import {
   Palette, 
   Wrench, 
   ChevronRight, 
-  Star, 
   Phone, 
   MessageCircle,
   Clock,
@@ -26,20 +25,42 @@ import {
 } from '../constants';
 import { ProductCard } from '../components/Layout';
 
+function unsplashHero(photoId: string) {
+  const base = `https://images.unsplash.com/${photoId}`;
+  const q = 'auto=format&fit=crop&q=75';
+  return {
+    src: `${base}?${q}&w=1280`,
+    srcSet: [
+      `${base}?${q}&w=640 640w`,
+      `${base}?${q}&w=1080 1080w`,
+      `${base}?${q}&w=1920 1920w`,
+    ].join(', '),
+    sizes: '100vw',
+  };
+}
+
+const HERO_SLIDES = [
+  unsplashHero('photo-1600585154340-be6161a56a0c'),
+  {
+    src: 'https://picsum.photos/seed/paint-hero/1280/720',
+    srcSet: [
+      'https://picsum.photos/seed/paint-hero/640/360 640w',
+      'https://picsum.photos/seed/paint-hero/1280/720 1280w',
+      'https://picsum.photos/seed/paint-hero/1920/1080 1920w',
+    ].join(', '),
+    sizes: '100vw',
+  },
+  unsplashHero('photo-1562664377-709f2c337eb2'),
+] as const;
+
 const Home = () => {
   const [activeColor, setActiveColor] = useState(COLOR_PALETTE[0]);
   const [productFilter, setProductFilter] = useState('Dulux');
   const [currentHero, setCurrentHero] = useState(0);
 
-  const heroImages = [
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920",
-    "https://picsum.photos/seed/paint-hero/1920/1080",
-    "https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=1920"
-  ];
-
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentHero((prev) => (prev + 1) % heroImages.length);
+      setCurrentHero((prev) => (prev + 1) % HERO_SLIDES.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -76,10 +97,16 @@ const Home = () => {
             className="absolute inset-0"
           >
             <img 
-              src={heroImages[currentHero]} 
+              src={HERO_SLIDES[currentHero].src}
+              srcSet={HERO_SLIDES[currentHero].srcSet}
+              sizes={HERO_SLIDES[currentHero].sizes}
+              width={1920}
+              height={1080}
               alt="Sơn Ngân Paint Hero" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
+              decoding="async"
+              fetchPriority={currentHero === 0 ? 'high' : 'auto'}
             />
             <div className="absolute inset-0 bg-black/30"></div>
           </motion.div>
@@ -114,7 +141,7 @@ const Home = () => {
         
         {/* Slider Indicators */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
-          {heroImages.map((_, idx) => (
+          {HERO_SLIDES.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentHero(idx)}

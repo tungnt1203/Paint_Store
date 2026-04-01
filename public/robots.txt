@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sonnganpaint.vn/sitemap.xml
+Sitemap: https://sonnganchinhhang.vn/sitemap.xml
