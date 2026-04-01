@@ -9,7 +9,7 @@ const About = () => {
     <div className="pt-24">
       <SeoMeta
         path="/about"
-        title={`Về ${CONTACT_INFO.name} - Tổng đại lý sơn chính hãng`}
+        title={`Về ${CONTACT_INFO.name} - Nhà phân phối sơn chính hãng`}
         description={`${CONTACT_INFO.fullName} — phân phối Dulux, Jotun, Nippon, Kova và thương hiệu lớn. Cam kết hàng chính hãng, tư vấn kỹ thuật. ${CONTACT_INFO.address}.`}
       />
       {/* Hero Section */}

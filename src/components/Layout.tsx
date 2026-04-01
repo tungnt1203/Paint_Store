@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Menu, X, Phone, ArrowRight, Share2, Award, Star, ShoppingCart, MapPin, Mail, Palette, Truck, Wrench } from 'lucide-react';
+import { Search, Menu, X, Phone, Share2, Award, MapPin, Mail, Palette, Truck, Wrench } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import logoImg from '../images/logo_sn_transparent.png';
+import logoImg from '../images/logo_sn_transparent_opt.png';
 
-import { PRODUCTS, CONTACT_INFO } from '../constants';
+import { CONTACT_INFO } from '../constants';
 
 const Logo = ({ className = "w-24 h-24", showText = false }: { className?: string, showText?: boolean }) => (
   <div className="flex items-center gap-3 group">
@@ -12,7 +12,10 @@ const Logo = ({ className = "w-24 h-24", showText = false }: { className?: strin
       <img 
         src={logoImg} 
         alt={`Logo ${CONTACT_INFO.name}`} 
-        className="w-full h-full object-contain"
+        className="w-full h-full object-cover"
+        width={296}
+        height={384}
+        decoding="async"
         referrerPolicy="no-referrer"
       />
     </div>
@@ -285,7 +288,7 @@ export const Footer = () => {
             <Logo className="w-14 h-14" showText={true} />
           </Link>
           <p className="text-white/70 font-body leading-relaxed">
-            Tổng đại lý sơn chính hãng. Chuyên cung cấp sơn nước, sơn dầu, sơn epoxy, sơn sắt thép, sơn chống thấm và vật tư ngành sơn. {CONTACT_INFO.slogan}.
+            Nhà phân phối sơn chính hãng. Chuyên cung cấp sơn nước, sơn dầu, sơn epoxy, sơn sắt thép, sơn chống thấm và vật tư ngành sơn. {CONTACT_INFO.slogan}.
           </p>
           <div className="flex space-x-4 items-center">
             <a href="https://facebook.com/sonnganpaint" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-all">

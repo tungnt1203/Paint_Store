@@ -1,6 +1,6 @@
 /** Gốc URL site (canonical, OG, JSON-LD). Đặt VITE_SITE_URL trong .env khi deploy. */
 export const SITE_URL = (
-  import.meta.env.VITE_SITE_URL?.replace(/\/$/, '') || 'https://sonnganpaint.vn'
+  import.meta.env.VITE_SITE_URL?.replace(/\/$/, '') || 'https://sonnganchinhhang.vn'
 ) as string;
 
 export function canonicalUrl(pathname: string): string {
