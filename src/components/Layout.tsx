@@ -12,7 +12,7 @@ const Logo = ({ className = "w-24 h-24", showText = false }: { className?: strin
       <img 
         src={logoImg} 
         alt={`Logo ${CONTACT_INFO.name}`} 
-        className="w-full h-full object-contain"
+        className="w-full h-full object-cover"
         width={296}
         height={384}
         decoding="async"
