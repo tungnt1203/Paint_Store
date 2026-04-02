@@ -4,7 +4,8 @@ import { ChevronRight, ShieldCheck, CheckCircle2, Info, ArrowLeft, Phone, Shoppi
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'motion/react';
 import { PRODUCTS, CONTACT_INFO } from '../constants';
-import { canonicalUrl, DEFAULT_OG_IMAGE, SEO_DEFAULT_LOCALE } from '../seo';
+import { canonicalUrl, DEFAULT_OG_IMAGE } from '../seo';
+import { SeoMeta } from '../components/SeoMeta';
 import { ProductCard } from '../components/Layout';
 
 const ProductDetail = () => {
@@ -17,10 +18,12 @@ const ProductDetail = () => {
   if (!product) {
     return (
       <div className="pt-40 pb-20 text-center">
-        <Helmet>
-          <title>Không tìm thấy sản phẩm | {CONTACT_INFO.name}</title>
-          <meta name="robots" content="noindex, follow" />
-        </Helmet>
+        <SeoMeta
+          path="/catalog"
+          title={`Không tìm thấy sản phẩm | ${CONTACT_INFO.name}`}
+          description="Sản phẩm bạn tìm kiếm hiện không tồn tại hoặc đã được gỡ khỏi danh mục."
+          noIndex={true}
+        />
         <h2 className="text-2xl font-bold text-primary">Sản phẩm không tồn tại.</h2>
         <Link to="/catalog" className="text-secondary underline mt-4 inline-block">Quay lại catalog</Link>
       </div>
@@ -34,6 +37,7 @@ const ProductDetail = () => {
       ? `${product.description.slice(0, 152)}…`
       : product.description;
   const ogImage = product.image?.startsWith('http') ? product.image : DEFAULT_OG_IMAGE;
+  const pageTitle = `${product.name} - ${product.brand} | ${CONTACT_INFO.name}`;
   const offerLd =
     product.price > 0
       ? {
@@ -52,23 +56,13 @@ const ProductDetail = () => {
 
   return (
     <div className="pt-28 pb-20 bg-surface-container-lowest">
+      <SeoMeta
+        path={`/product/${product.id}`}
+        title={pageTitle}
+        description={desc}
+        image={ogImage}
+      />
       <Helmet>
-        <title>{`${product.name} - ${product.brand} | ${CONTACT_INFO.name}`}</title>
-        <meta name="description" content={desc} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:site_name" content={CONTACT_INFO.name} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content={SEO_DEFAULT_LOCALE} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={`${product.name} - ${product.brand} | ${CONTACT_INFO.name}`} />
-        <meta property="og:description" content={desc} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={`${product.name} - ${product.brand}`} />
-        <meta name="twitter:description" content={desc} />
-        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',

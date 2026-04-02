@@ -165,10 +165,13 @@ const Home = () => {
               </h2>
               <div className="space-y-6 text-on-surface-variant text-lg leading-relaxed">
                 <p>
-                  Chào mừng quý khách đến với <strong>{CONTACT_INFO.fullName}</strong>. Chúng tôi tự hào là tổng đại lý phân phối sơn chính hãng hàng đầu, mang đến giải pháp hoàn thiện tối ưu cho mọi công trình kiến trúc.
+                  Chào mừng quý khách đến với <strong>Công ty TNHH TM &amp; XD Sơn Ngân</strong>. Chúng tôi tự hào là tổng đại lý phân phối sơn chính hãng hàng đầu tại Việt Nam, mang đến giải pháp hoàn thiện tối ưu nhất cho mọi công trình kiến trúc.
                 </p>
                 <p>
-                  Với nhiều năm kinh nghiệm trong ngành, chúng tôi cam kết cung cấp những sản phẩm chất lượng nhất từ các thương hiệu danh tiếng như Dulux, Jotun, Nippon, Kova... cùng dịch vụ tư vấn chuyên nghiệp, tận tâm.
+                  Đến với đại lý Sơn Ngân, quý khách hàng cần sơn gì có sơn đó: sơn bền, giá tốt, đa sắc màu. Chúng tôi cung cấp đầy đủ và đa dạng các dòng sơn như sơn trang trí, sơn dân dụng, sơn bảo vệ bề mặt bê tông, kim loại, gỗ, cùng các giải pháp sơn cho hệ thống kết cấu hạ tầng.
+                </p>
+                <p>
+                  Với nhiều năm kinh nghiệm trong ngành, chúng tôi cam kết giúp khách hàng chọn đúng sơn, dùng đúng mục đích với giá thành hợp lý. Đội ngũ luôn theo sát và hỗ trợ khách hàng xuyên suốt từ khâu tư vấn, mua hàng đến hoàn thiện thi công.
                 </p>
               </div>
             </motion.div>
@@ -210,6 +213,9 @@ const Home = () => {
           <h2 className="text-4xl md:text-6xl font-headline font-black text-primary tracking-tighter uppercase mb-8">
             Sơn Nước và Bột Trét
           </h2>
+          <p className="text-on-surface-variant text-lg max-w-2xl mx-auto mb-10">
+            Các thương hiệu nổi tiếng và chất lượng
+          </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {['Dulux', 'Jotun', 'Nippon', 'Kova', 'TOA', 'Spec'].map(brand => (
@@ -252,6 +258,16 @@ const Home = () => {
             <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
               Giải pháp ngăn chặn ẩm mốc, bảo vệ tường và sàn tuyệt đối cho công trình của bạn.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              {['KOVA', 'YURI', 'SIKA', 'FLINKOTE'].map((brand) => (
+                <span
+                  key={brand}
+                  className="px-8 py-3 rounded-xl font-headline font-bold text-sm uppercase tracking-widest bg-white text-on-surface-variant border-2 border-outline-variant hover:border-primary hover:text-primary transition-all"
+                >
+                  {brand}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -274,11 +290,21 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-headline font-black text-primary tracking-tighter uppercase mb-4">
-              Sơn dầu cho gỗ và kim loại
+              Sơn dầu cho kim loại và gỗ
             </h2>
             <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
               Bảo vệ và làm đẹp bề mặt gỗ, kim loại với độ bóng cao và khả năng chống rỉ sét vượt trội.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              {['EXPO', 'BẠCH TUYẾT', 'CADIN'].map((brand) => (
+                <span
+                  key={brand}
+                  className="px-8 py-3 rounded-xl font-headline font-bold text-sm uppercase tracking-widest bg-white text-on-surface-variant border-2 border-outline-variant hover:border-primary hover:text-primary transition-all"
+                >
+                  {brand}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -306,6 +332,16 @@ const Home = () => {
             <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
               Giải pháp bảo vệ bề mặt công nghiệp, chịu mài mòn, va đập và chống ăn mòn vượt trội.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              {['KCC', 'JOTUN CÔNG NGHIỆP'].map((brand) => (
+                <span
+                  key={brand}
+                  className="px-8 py-3 rounded-xl font-headline font-bold text-sm uppercase tracking-widest bg-white text-on-surface-variant border-2 border-outline-variant hover:border-primary hover:text-primary transition-all"
+                >
+                  {brand}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
