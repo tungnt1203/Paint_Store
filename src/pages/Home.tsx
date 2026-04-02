@@ -125,7 +125,7 @@ const Home = () => {
             <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 md:gap-4">
               <Link
                 to="/catalog"
-                className="bg-secondary text-white px-5 py-2.5 text-sm font-headline font-bold rounded-full shadow-xl hover:scale-105 transition-transform sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg"
+                className="bg-secondary text-black px-5 py-2.5 text-sm font-headline font-bold rounded-full shadow-xl hover:scale-105 transition-transform sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg"
               >
                 Xem sản phẩm
               </Link>
@@ -144,6 +144,8 @@ const Home = () => {
           {HERO_SLIDES.map((_, idx) => (
             <button
               key={idx}
+              type="button"
+              aria-label={`Chuyển tới banner ${idx + 1}`}
               onClick={() => setCurrentHero(idx)}
               className={`w-3 h-3 rounded-full transition-all ${currentHero === idx ? 'bg-secondary w-8' : 'bg-white/50'}`}
             />
@@ -439,7 +441,7 @@ const Home = () => {
                   </div>
                   <div className="relative overflow-hidden">
                     <img src={project.after} alt="Sau khi sơn" className="w-full h-full object-cover" />
-                    <div className="absolute top-4 right-4 bg-secondary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">Sau</div>
+                    <div className="absolute top-4 right-4 bg-secondary text-black text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">Sau</div>
                   </div>
                 </div>
                 {/* Hover overlay */}
@@ -516,7 +518,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6">
               <a 
                 href={`tel:${CONTACT_INFO.phone.replace(/\./g, '')}`} 
-                className="w-full sm:w-auto bg-secondary text-white px-5 py-2.5 text-sm font-headline font-bold rounded-full flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-xl shadow-secondary/20 sm:px-7 sm:py-3 sm:text-base sm:gap-2.5 md:px-10 md:py-5 md:text-xl md:gap-3"
+                className="w-full sm:w-auto bg-secondary text-primary px-5 py-2.5 text-sm font-headline font-bold rounded-full flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-xl shadow-secondary/20 sm:px-7 sm:py-3 sm:text-base sm:gap-2.5 md:px-10 md:py-5 md:text-xl md:gap-3"
               >
                 <Phone className="w-5 h-5 shrink-0 md:w-6 md:h-6" aria-hidden />
                 {CONTACT_INFO.phone}

@@ -6,7 +6,15 @@ import logoImg from '../images/logo_sn_transparent_opt.png';
 
 import { CONTACT_INFO } from '../constants';
 
-const Logo = ({ className = "w-24 h-24", showText = false }: { className?: string, showText?: boolean }) => (
+const Logo = ({
+  className = "w-24 h-24",
+  showText = false,
+  darkBackground = false,
+}: {
+  className?: string,
+  showText?: boolean,
+  darkBackground?: boolean
+}) => (
   <div className="flex items-center gap-3 group">
     <div className={`relative ${className} flex items-center justify-center flex-shrink-0`}>
       <img 
@@ -21,10 +29,18 @@ const Logo = ({ className = "w-24 h-24", showText = false }: { className?: strin
     </div>
     {showText && (
       <div className="flex flex-col leading-none min-w-0 text-left">
-        <span className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter text-[#E61E50] uppercase truncate max-w-[65vw] sm:max-w-none">
+        <span
+          className={`text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase truncate max-w-[65vw] sm:max-w-none ${
+            darkBackground ? 'text-white' : 'text-[#B01244]'
+          }`}
+        >
           {CONTACT_INFO.name}
         </span>
-        <span className="text-[9px] sm:text-[10px] font-bold tracking-widest text-[#00AEEF] uppercase mt-1 line-clamp-2">
+        <span
+          className={`text-[9px] sm:text-[10px] font-bold tracking-widest uppercase mt-1 line-clamp-2 ${
+            darkBackground ? 'text-white/90' : 'text-[#0B5CAD]'
+          }`}
+        >
           {CONTACT_INFO.slogan}
         </span>
       </div>
@@ -66,10 +82,10 @@ const MainHeader = () => (
         <h3 className="text-primary font-headline font-bold text-lg md:text-xl mb-2">
           {CONTACT_INFO.headerTitle}
         </h3>
-        <h1 className="text-[#E61E50] font-headline font-black text-5xl md:text-7xl uppercase tracking-tighter mb-2">
+        <h1 className="text-[#B01244] font-headline font-black text-5xl md:text-7xl uppercase tracking-tighter mb-2">
           {CONTACT_INFO.name}
         </h1>
-        <p className="text-[#00AEEF] font-headline font-bold text-lg md:text-2xl uppercase tracking-[0.2em]">
+        <p className="text-[#0B5CAD] font-headline font-bold text-lg md:text-2xl uppercase tracking-[0.2em]">
           {CONTACT_INFO.slogan}
         </p>
       </div>
@@ -107,7 +123,7 @@ const NavigationBar = () => {
               key={`${link.path}-${link.name}`}
               to={link.path}
               className={`h-full flex items-center px-4 font-headline font-bold text-sm uppercase tracking-wider transition-all relative group ${
-                location.pathname === link.path ? 'text-secondary' : 'text-white hover:text-secondary'
+                location.pathname === link.path ? 'text-amber-200' : 'text-white hover:text-amber-200'
               }`}
             >
               {link.name}
@@ -116,7 +132,11 @@ const NavigationBar = () => {
           ))}
         </div>
         
-        <button className="text-white hover:text-secondary transition-colors p-2">
+        <button
+          type="button"
+          aria-label="Mở tìm kiếm"
+          className="text-white hover:text-secondary transition-colors p-2"
+        >
           <Search size={24} />
         </button>
       </div>
@@ -257,7 +277,7 @@ export const Navbar = () => {
         <Link to="/" className="flex items-center gap-2.5 min-w-0 flex-1">
           <Logo className="w-11 h-11 shrink-0" />
           <div className="min-w-0 text-left">
-            <span className="block font-headline font-black text-sm text-[#E61E50] uppercase tracking-tight leading-tight truncate">
+            <span className="block font-headline font-black text-sm text-[#B01244] uppercase tracking-tight leading-tight truncate">
               {CONTACT_INFO.name}
             </span>
             <span className="block text-[10px] font-bold text-on-surface-variant/80 truncate">
@@ -285,7 +305,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
         <div className="space-y-8">
           <Link to="/" className="flex items-center">
-            <Logo className="w-14 h-14" showText={true} />
+            <Logo className="w-14 h-14" showText={true} darkBackground={true} />
           </Link>
           <p className="text-white/70 font-body leading-relaxed">
             Nhà phân phối sơn chính hãng. Chuyên cung cấp sơn nước, sơn dầu, sơn epoxy, sơn sắt thép, sơn chống thấm và vật tư ngành sơn. {CONTACT_INFO.slogan}.
@@ -345,7 +365,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-white/10 text-center text-white/40 font-body text-sm">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-white/10 text-center text-white/70 font-body text-sm">
         © 2026 {CONTACT_INFO.name}. All rights reserved. Thiết kế bởi tungnt.
       </div>
     </footer>
