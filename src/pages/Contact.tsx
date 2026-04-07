@@ -71,7 +71,7 @@ const Contact = () => {
                 />
               </a>
               <a 
-                href="https://facebook.com/sonnganpaint" 
+                href="https://www.facebook.com/profile.php?id=61574350202481"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-2xl bg-white border border-outline-variant/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm hover:shadow-xl p-3"

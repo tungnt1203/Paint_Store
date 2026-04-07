@@ -311,7 +311,7 @@ export const Footer = () => {
             Nhà phân phối sơn chính hãng. Chuyên cung cấp sơn nước, sơn dầu, sơn epoxy, sơn sắt thép, sơn chống thấm và vật tư ngành sơn. {CONTACT_INFO.slogan}.
           </p>
           <div className="flex space-x-4 items-center">
-            <a href="https://facebook.com/sonnganpaint" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-all">
+            <a href="https://www.facebook.com/profile.php?id=61574350202481" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-all">
               <Share2 size={20} className="text-white" />
             </a>
             <a href={`https://zalo.me/${CONTACT_INFO.phone.replace(/\./g, '')}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-all">
@@ -368,7 +368,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-white/10 text-center text-white/70 font-body text-sm">
         © 2026 {CONTACT_INFO.name}. All rights reserved. Thiết kế bởi{' '}
         <a
-          href="https://www.facebook.com/tungnt1203/"
+          href="https://www.facebook.com/profile.php?id=61574350202481"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-white transition-colors"
@@ -384,6 +384,22 @@ export const Footer = () => {
 export const FloatingActions = () => {
   return (
     <div className="fixed bottom-8 right-8 flex flex-col space-y-4 z-50">
+      <a
+        href="https://www.facebook.com/profile.php?id=61574350202481"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Mở Facebook của ${CONTACT_INFO.name}`}
+        className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer border-4 border-primary/5"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          className="w-10 h-10 text-[#1877F2]"
+          aria-hidden="true"
+          fill="currentColor"
+        >
+          <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073c0 6.019 4.388 11.01 10.125 11.927v-8.437H7.078v-3.49h3.047V9.41c0-3.017 1.791-4.686 4.533-4.686 1.313 0 2.686.236 2.686.236v2.963h-1.513c-1.49 0-1.956.93-1.956 1.885v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.083 24 18.092 24 12.073z" />
+        </svg>
+      </a>
       <a 
         href={`https://zalo.me/${CONTACT_INFO.phone.replace(/\./g, '')}`} 
         target="_blank"
