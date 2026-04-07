@@ -366,7 +366,16 @@ export const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-white/10 text-center text-white/70 font-body text-sm">
-        © 2026 {CONTACT_INFO.name}. All rights reserved. Thiết kế bởi tungnt.
+        © 2026 {CONTACT_INFO.name}. All rights reserved. Thiết kế bởi{' '}
+        <a
+          href="https://www.facebook.com/tungnt1203/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-white transition-colors"
+        >
+          tungnt
+        </a>
+        .
       </div>
     </footer>
   );
