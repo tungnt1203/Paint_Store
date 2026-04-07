@@ -54,9 +54,9 @@ const Home = () => {
       />
 
       {/* SECTION 1 – Hero Slider */}
-      <section className="relative h-[60vh] md:h-[80vh] overflow-hidden bg-surface">
+      <section className="relative w-full aspect-video md:aspect-auto md:h-[80vh] overflow-hidden bg-surface">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain md:object-cover"
           src={heroVideo}
           poster={HERO_POSTER}
           autoPlay
@@ -70,29 +70,11 @@ const Home = () => {
         
         <div className="absolute inset-0 flex items-center justify-center text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="max-w-4xl"
-          >
-            <h2 className="text-white font-headline font-black text-4xl md:text-7xl uppercase tracking-tighter mb-6 drop-shadow-2xl">
-              {CONTACT_INFO.bannerSlogan}
-            </h2>
-            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 md:gap-4">
-              <Link
-                to="/catalog"
-                className="bg-secondary text-black px-5 py-2.5 text-sm font-headline font-bold rounded-full shadow-xl hover:scale-105 transition-transform sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg"
-              >
-                Xem sản phẩm
-              </Link>
-              <a
-                href={`tel:${CONTACT_INFO.phone.replace(/\./g, '')}`}
-                className="bg-white text-primary px-5 py-2.5 text-sm font-headline font-bold rounded-full shadow-xl hover:scale-105 transition-transform sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg"
-              >
-                Liên hệ ngay
-              </a>
-            </div>
-          </motion.div>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.25 }}
+            className="w-full h-full"
+          />
         </div>
         
       </section>
