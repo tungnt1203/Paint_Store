@@ -88,15 +88,26 @@ const About = () => {
             <p className="text-on-surface-variant text-lg font-medium">Chúng tôi hợp tác độc quyền với các nhà lãnh đạo thế giới để đảm bảo khách hàng nhận được kết quả bền bỉ và rực rỡ nhất.</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {BRANDS.map((brand) => (
-            <div key={brand.id} className="bg-surface p-12 rounded-[3rem] flex items-center justify-between group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
-              <div>
-                <h3 className="text-4xl font-headline font-black text-primary group-hover:text-secondary transition-colors">{brand.name}</h3>
-                <p className="mt-4 text-on-surface-variant font-bold text-base">{brand.description}</p>
+            <div key={brand.id} className="bg-surface p-10 md:p-12 rounded-[3rem] flex flex-col sm:flex-row items-center sm:items-stretch justify-between gap-8 group cursor-pointer border-2 border-outline-variant/10 hover:border-primary transition-all duration-500 shadow-sm hover:shadow-xl">
+              <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8 flex-1 min-w-0">
+                <div className="w-full max-w-[200px] sm:w-36 sm:max-w-none shrink-0 aspect-[5/3] bg-white rounded-2xl p-4 flex items-center justify-center border border-outline-variant/10">
+                  <img
+                    src={brand.logo}
+                    alt={`Logo ${brand.name}`}
+                    className="max-w-full max-h-full object-contain"
+                    referrerPolicy="no-referrer"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="text-center sm:text-left min-w-0">
+                  <h3 className="text-2xl md:text-3xl font-headline font-black text-primary group-hover:text-secondary transition-colors">{brand.name}</h3>
+                  <p className="mt-3 text-on-surface-variant font-bold text-sm md:text-base leading-snug">{brand.description}</p>
+                </div>
               </div>
-              <div className="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-                <ArrowRight size={24} />
+              <div className="w-14 h-14 shrink-0 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all self-end sm:self-center">
+                <ArrowRight size={22} />
               </div>
             </div>
           ))}

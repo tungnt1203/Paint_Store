@@ -1,4 +1,19 @@
 import { Product, Category } from './types';
+import logoCadin from './images/paint_brand/cadin.png';
+import logoDulux from './images/paint_brand/dulux.png';
+import logoJotun from './images/paint_brand/jotun.png';
+import logoKcc from './images/paint_brand/kcc.png';
+import logoKova from './images/paint_brand/kova.png';
+import logoMaxilite from './images/paint_brand/maxilite.png';
+import logoNippon from './images/paint_brand/nipponpaint.png';
+import logoSeamaster from './images/paint_brand/seamaster.png';
+import logoSika from './images/paint_brand/sika.png';
+import logoSonBachTuyet from './images/paint_brand/sonbachtuyet.png';
+import logoSonHaiAu from './images/paint_brand/sonhaiau.png';
+import logoSonTheHeMoi from './images/paint_brand/sonthehemoi.png';
+import logoToa from './images/paint_brand/toa.png';
+import logoYuri from './images/paint_brand/yuri.png';
+import logoRainbow from './images/paint_brand/rainbow.png';
 
 export const PRODUCTS: Product[] = [
   {
@@ -241,40 +256,94 @@ export const PRODUCTS: Product[] = [
 
 export const BRANDS = [
   {
+    id: 'cadin',
+    name: 'Cadin',
+    logo: logoCadin,
+    description: 'Sơn trang trí và công nghiệp chất lượng.'
+  },
+  {
     id: 'dulux',
     name: 'Dulux',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Dulux_logo.svg/2560px-Dulux_logo.svg.png',
+    logo: logoDulux,
     description: 'Thương hiệu sơn hàng đầu thế giới từ AkzoNobel.'
   },
   {
     id: 'jotun',
     name: 'Jotun',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Jotun_logo.svg/512px-Jotun_logo.svg.png',
+    logo: logoJotun,
     description: 'Giải pháp sơn tối ưu từ Na Uy cho mọi công trình.'
   },
   {
-    id: 'nippon',
-    name: 'Nippon Paint',
-    logo: 'https://nipponpaint.com.vn/sites/default/files/nippon-paint-logo.png',
-    description: 'Sơn đâu cũng đẹp với công nghệ Nhật Bản.'
+    id: 'kcc',
+    name: 'KCC',
+    logo: logoKcc,
+    description: 'Công nghệ sơn và phủ bảo vệ từ Hàn Quốc.'
   },
   {
     id: 'kova',
     name: 'Kova',
-    logo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDNhaDPjgHOn22QEcbfT8sn0SlU7UFw_xHYeZnCZ7bTDQ0t1u80ppCFREZ9MOZ6VQU6wupAelmLvn8Z54r8s-XIh06B3R9SjR9oqt_Gr_OYRe-ep3SLiZv1tGmYvoygXCkxW27lCjCMcUFTCulukwxsCr3kQ0b5VLkfA4CpxOALIA62Mc0RfeOLkDpnc_vVzpQBo34TlMaAdGddBsqLaRSfiInMOpO8GYCOFjx_Fekig5ZX7v2WKdFPnTrhnUKGH6aG_R0SxK16i0',
+    logo: logoKova,
     description: 'Thương hiệu sơn Việt vươn tầm thế giới.'
+  },
+  {
+    id: 'maxilite',
+    name: 'Maxilite',
+    logo: logoMaxilite,
+    description: 'Dòng sơn phổ thông tin cậy, hiệu quả chi phí.'
+  },
+  {
+    id: 'nippon',
+    name: 'Nippon Paint',
+    logo: logoNippon,
+    description: 'Sơn đâu cũng đẹp với công nghệ Nhật Bản.'
+  },
+  {
+    id: 'seamaster',
+    name: 'Seamaster',
+    logo: logoSeamaster,
+    description: 'Hệ thống sơn và chống thấm chuyên nghiệp.'
+  },
+  {
+    id: 'sika',
+    name: 'Sika',
+    logo: logoSika,
+    description: 'Giải pháp kết dính, chống thấm và bảo vệ công trình.'
+  },
+  {
+    id: 'son-bach-tuyet',
+    name: 'Sơn Bạch Tuyết',
+    logo: logoSonBachTuyet,
+    description: 'Thương hiệu sơn Việt quen thuộc trên thị trường.'
+  },
+  {
+    id: 'son-hai-au',
+    name: 'Sơn Hải Âu',
+    logo: logoSonHaiAu,
+    description: 'Sơn nước và vật liệu hoàn thiện nội ngoại thất.'
+  },
+  {
+    id: 'son-the-he-moi',
+    name: 'Sơn Thế Hệ Mới',
+    logo: logoSonTheHeMoi,
+    description: 'Đồng hành cùng công trình dân dụng và công nghiệp.'
   },
   {
     id: 'toa',
     name: 'TOA Paint',
-    logo: 'https://toagroup.com.vn/vnt_upload/weblink/TOA_Logo_Standard_1.png',
+    logo: logoToa,
     description: 'Sơn công nghệ Thái Lan, bảo vệ tối ưu.'
   },
   {
-    id: 'spec',
-    name: 'Spec',
-    logo: 'https://spec.com.vn/wp-content/uploads/2018/04/logo-spec.png',
-    description: 'Đỉnh cao về trang trí và bảo vệ.'
+    id: 'yuri',
+    name: 'Yuri',
+    logo: logoYuri,
+    description: 'Giải pháp sơn trang trí hiện đại.'
+  },
+  {
+    id: 'rainbow',
+    name: 'rainbow',
+    logo: logoRainbow,
+    description: 'Sơn chống thấm cao cấp.'
   }
 ];
 

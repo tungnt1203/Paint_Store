@@ -324,7 +324,7 @@ const Home = () => {
             <p className="text-on-surface-variant text-base max-w-2xl mx-auto">{CONTACT_INFO.name} tự hào là nhà phân phối chính hãng của các thương hiệu sơn hàng đầu thế giới.</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-10 items-stretch">
             {BRANDS.map((brand) => (
               <motion.div
                 key={brand.id}
